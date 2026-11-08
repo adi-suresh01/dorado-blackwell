@@ -2,12 +2,13 @@
 
 Measured 2026-11-06/08 on rented pods (RunPod; Vast for the 3 h soak): RTX 5090 (32 GB), RTX PRO 6000 Blackwell
 Server Edition (96 GB), H100 PCIe (80 GB, 310 W cap), and 2x RTX 5090. Dorado 2.1.2 (Linux build sha256
-`f4ed83ac...`; 1.4.0 for one soak), driver 595.91.07 on every RunPod pod (595.99.02 on the Vast box), models
-hac@v5.2.0, sup@v5.2.0, hac@v6.0.0 with their 5mC_5hmC models. Data are proxies (no public R10.4.1 5 kHz cfDNA
-raw signal exists): 155 bp synthetic constructs with known 5mC/5hmC sites (ONT modbase-validation_2024.10, 473,185
-reads) and HG002 genomic reads with the same total signal (1.05e9 samples each). Every config ran at least twice
-except the three soaks and two batch-size checks (`-b 512`, and `-b 1024` on 155 bp reads), which ran once; 116
-runs, no crashes, $22.28 of GPU rental. Raw verdicts: `runs/`, tables: `results/`.
+`f4ed83ac...`; 1.4.0 for two soaks), driver 595.91.07 on every RunPod pod (595.99.02 on the Vast box), models
+hac@v5.2.0, sup@v5.2.0, hac@v6.0.0 with their 5mC_5hmC models (4mC_5mC and 6mA for one soak). Data are proxies
+(no public R10.4.1 5 kHz cfDNA raw signal exists): 155 bp synthetic constructs with known 5mC/5hmC sites (ONT
+modbase-validation_2024.10, 473,185 reads) and HG002 genomic reads with the same total signal (1.05e9 samples
+each). Every config ran at least twice except the four soaks and two batch-size checks (`-b 512`, and `-b 1024` on
+155 bp reads), which ran once; 117 runs, no crashes, $36.26 of GPU rental. Raw verdicts: `runs/`, tables:
+`results/`.
 
 ## Results (proxy data; basecalled samples/s, median of 2 runs; $/Gbase at the rental rate shown)
 
@@ -42,17 +43,19 @@ runs, no crashes, $22.28 of GPU rental. Raw verdicts: `runs/`, tables: `results/
    basecaller holds 28.2 of the 28.7 GB Dorado allows itself, the mods model is starved, and the GPU runs at 41% of
    the PRO 6000's speed. `-b 2048` doubles it to 6.7e7 samples/s (81% of the PRO 6000) with byte-identical calls
    (1536: 5.5e7, 1024: 4.1e7). On 155 bp reads the default is already the fastest (6.75e7 vs 4.0e7 at 1024, n=1).
-5. **The dorado#1507 crash (sup@v5.2 + mods on 2x RTX 5090) did not reproduce, including a 3 h run of 2.1.2.**
-   Same model pair, `--device cuda:all`, HG002 reads. First machine, 1.47e11 samples (605,807 reads): 2.1.2 ran
-   65 min at 3.78e7 samples/s and 1.4.0, the reporter's version, 72 min at 3.41e7, both ending when the six POD5
-   files ran out (exit 0). Then 2.1.2 ran the full 3 h box (stopped by us) on a second 2x 5090 machine, over the
+5. **The dorado#1507 crash (sup@v5.2 + mods on 2x RTX 5090) did not reproduce, in runs up to 5 h.** All used
+   `--device cuda:all` on HG002 reads. With 5mC_5hmC on the first machine, over 1.47e11 samples (605,807 reads):
+   2.1.2 ran 65 min at 3.78e7 samples/s and 1.4.0, the reporter's version, 72 min at 3.41e7, both ending when the
+   six POD5 files ran out (exit 0). Then 2.1.2 ran the full 3 h box (stopped by us) on a second machine over the
    same files listed 4 times: both GPUs 100% busy at batch 352, memory flat from the first to the last 45 min (GPU0
-   28,947 to 29,014 MiB of 32,607), no error lines (n=1; samples/s not logged, since the box stops Dorado before
-   its summary). The reporter's three crashes came after 89 min (5mC_5hmC), 4.3 h and 11 h (4mC_5mC + 6mA, not
-   tested here), so 3 h does not rule it out. In all three logs (1.1.1 and 1.4.0) the two 5090s took different
-   batch sizes from Dorado's start-up benchmark, and in the one with memory lines a GPU sat at 29.5 of its 30.5 GB
-   budget (batch 736). Ours took 224 on both under
-   1.4.0 (17.9 GB); 2.1.2 skips the benchmark and uses 352 from its built-in table on both (28.2 GB, also clean).
+   28,947 to 29,014 MiB of 32,607). Then 1.4.0 ran the issue's title pair, 4mC_5mC@v1 + 6mA@v1, for a 5 h box on a
+   third machine (files listed 6 times): both GPUs 99.9% busy at batch 224, peak 21,411 MiB each. No run logged an
+   error line (each n=1; samples/s not logged for the boxed runs, since the box stops Dorado before its summary).
+   The reporter's crashes came after 89 min (5mC_5hmC), 4.3 h and 11 h (4mC_5mC + 6mA), so 5 h passes the 1.4.0
+   crash time but not the 11 h one. In all three logs (1.1.1 and 1.4.0) the two 5090s took different batch sizes
+   from Dorado's start-up benchmark, and in the one with memory lines a GPU sat at 29.5 of its 30.5 GB budget (batch
+   736). Every run here gave both GPUs the same size: 224 from 1.4.0's benchmark (17.9 GB with 5mC_5hmC) and 352
+   from 2.1.2's built-in table (28.2 GB). The mismatched case is untested.
 
 ## What to run
 
@@ -65,10 +68,11 @@ runs, no crashes, $22.28 of GPU rental. Raw verdicts: `runs/`, tables: `results/
 - Reproducibility: pin the Dorado build, models and every flag per assay version; never change chunk options
   mid-study; log the GPU architecture with each sample; keep runs from different architectures (here H100 vs
   RTX 5090 / PRO 6000) apart in a longitudinal comparison, or re-call them on one architecture.
-- Crash (dorado#1507): no verified fix, since it did not reproduce here; 2.1.2 ran 3 h clean on 2x 5090 with both
-  GPUs at the same batch size. Mitigations from the batch-size pattern in finding 5, untested against the crash:
-  on a 2x 5090 box, run 2.1.2 (one batch size from its table for both GPUs) or pass a fixed `-b` so both GPUs
-  match. Restart a crashed run with `--resume-from <partial.bam>`, which skips reads already written.
+- Crash (dorado#1507): no verified fix, since it did not reproduce here; on 2x 5090, 2.1.2 ran 3 h clean and 1.4.0
+  ran 4mC_5mC + 6mA 5 h clean, each with both GPUs at the same batch size. Mitigations from the batch-size pattern
+  in finding 5, untested against the crash: on a 2x 5090 box, run 2.1.2 (one batch size from its table for both
+  GPUs) or pass a fixed `-b` so both GPUs match. Restart a crashed run with `--resume-from <partial.bam>`, which
+  skips reads already written.
 
 ## Repro
 
@@ -87,10 +91,10 @@ python scripts/q4_table.py                                # results/q4_pileups.c
 - Proxies, not cfDNA: synthetic 155 bp constructs and HG002 genomic DNA. Fragment-length mix, adapters and
   methylation patterns of real plasma cfDNA will differ.
 - One host per GPU, with different CPUs: Ryzen 9 9950X (5090, and the 2x 5090 on a separate machine), EPYC 9355
-  (PRO 6000), Xeon 8352Y 2.2 GHz (H100); the 3 h soak ran on a third 5090 machine (EPYC 7402P, 500 W cap). HAC
-  short-read + mods runs are partly CPU-bound (GPU use 70%, 55%, 35%), so the H100 PCIe HAC short-read numbers
-  mostly measure its host; SUP runs kept every GPU 92-99% busy. H100 PCIe is not H100 SXM, the part Dorado is
-  tuned for.
+  (PRO 6000), Xeon 8352Y 2.2 GHz (H100); the 3 h soak ran on another 2x 5090 machine (EPYC 7402P, 500 W cap) and
+  the 5 h soak on a third (Ryzen 9 9950X). HAC short-read + mods runs are partly CPU-bound (GPU use 70%, 55%, 35%),
+  so the H100 PCIe HAC short-read numbers mostly measure its host; SUP runs kept every GPU 92-99% busy. H100 PCIe
+  is not H100 SXM, the part Dorado is tuned for.
 - Each run is 1.05e9 samples (10-70 s) apart from the soaks; costs use RunPod's rate at rental and Dorado's own
   basecalling time.
 - On the 5090, the first run of three HAC configs on 155 bp reads (`q3-hac52-short`, `q3-hac60-short`,

@@ -1,0 +1,149 @@
+{
+ "schema_version": 1,
+ "run_id": "NVIDIA-GeForce-RTX-5090x2_q1-soak5h-sup52-4mc5mc-6ma-140_r1_20261108T073737Z",
+ "question": "Q1",
+ "config_id": "q1-soak5h-sup52-4mc5mc-6ma-140",
+ "repeat": 1,
+ "started_utc": "20261108T073737Z",
+ "host": {
+  "provider": "runpod",
+  "pod_id": "t6mlyh2gmzec91",
+  "image": "nvidia/cuda:12.8.1-base-ubuntu24.04@sha256:133c78a0575303be34164d0b90137a042172bdf60696af01a3c424ab402d86e2",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "gpu_count": 2,
+  "driver_version": "595.91.07",
+  "cuda_driver_version": "13.2",
+  "compute_cap": "12.0",
+  "vram_mib": 32607,
+  "power_limit_w": 600.0,
+  "gpu_uuids": [
+   "GPU-5e122be4-d50a-b390-8d55-416f58cdea44",
+   "GPU-9bd37606-7b25-df74-1753-26ad8065dedf"
+  ],
+  "cpu_model": "AMD Ryzen 9 9950X 16-Core Processor",
+  "cpu_threads": 32,
+  "host_ram_gib": 123.4,
+  "kernel": "6.8.0-147-generic"
+ },
+ "dorado": {
+  "version": "1.4.0+ba44a013",
+  "build_sha256": "ea15250d911c6b6efdb21cc142008b2be8a5c781c8b0a4593b82f27b07385731",
+  "simplex_model": "dna_r10.4.1_e8.2_400bps_sup@v5.2.0",
+  "mods_models": [
+   "dna_r10.4.1_e8.2_400bps_sup@v5.2.0_4mC_5mC@v1",
+   "dna_r10.4.1_e8.2_400bps_sup@v5.2.0_6mA@v1"
+  ]
+ },
+ "args": {
+  "command": [
+   "/workspace/dorado/dorado-1.4.0-linux-x64/bin/dorado",
+   "basecaller",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0",
+   "/workspace/dorado/soak",
+   "--device",
+   "cuda:all",
+   "--batchsize",
+   "0",
+   "-v",
+   "--modified-bases-models",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_4mC_5mC@v1\\,/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_6mA@v1"
+  ],
+  "device": "cuda:all",
+  "batchsize_requested": 0,
+  "chunksize_requested": null,
+  "overlap_requested": null,
+  "mods_batchsize_requested": null,
+  "env": {
+   "CUDA_VERSION": "12.8.1",
+   "DORADO_BUILD_SHA256": "ea15250d911c6b6efdb21cc142008b2be8a5c781c8b0a4593b82f27b07385731"
+  }
+ },
+ "data": {
+  "subset_id": "soak",
+  "proxy": true,
+  "source": "unknown",
+  "reads": null,
+  "total_samples": null,
+  "sample_rate_hz": null,
+  "read_ids_sha256": null
+ },
+ "result": {
+  "exit_code": 124,
+  "time_limited": true,
+  "crashed": false,
+  "error_lines": [],
+  "wall_s": 18000.609,
+  "dorado_finished_ms": null
+ },
+ "batching": {
+  "batchsize_used": 224,
+  "chunksize_used": 12288,
+  "batchsize_from_benchmark_table": null,
+  "log_lines": [
+   "[2026-11-08 07:37:37.420] [info] Running: \"basecaller\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0\" \"/workspace/dorado/soak\" \"--device\" \"cuda:all\" \"--batchsize\" \"0\" \"-v\" \"--modified-bases-models\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_4mC_5mC@v1,/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_6mA@v1\"",
+   "[2026-11-08 07:37:49.332] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 320",
+   "[2026-11-08 07:37:49.332] [debug] cuda:0 maximum safe estimated batch size at chunk size 6144 is 640",
+   "[2026-11-08 07:37:49.332] [debug] Auto batchsize cuda:0: testing up to 640 in steps of 32",
+   "[2026-11-08 07:37:49.332] [debug] cuda:1 maximum safe estimated batch size at chunk size 12288 is 320",
+   "[2026-11-08 07:37:49.332] [debug] cuda:1 maximum safe estimated batch size at chunk size 6144 is 640",
+   "[2026-11-08 07:37:49.332] [debug] Auto batchsize cuda:1: testing up to 640 in steps of 32",
+   "[2026-11-08 07:37:49.332] [info] Calculating optimized batch size for GPU \"NVIDIA GeForce RTX 5090\" and model dna_r10.4.1_e8.2_400bps_sup@v5.2.0. Full benchmarking will run for this device, which may take some time.",
+   "[2026-11-08 07:37:49.332] [info] Calculating optimized batch size for GPU \"NVIDIA GeForce RTX 5090\" and model dna_r10.4.1_e8.2_400bps_sup@v5.2.0. Full benchmarking will run for this device, which may take some time.",
+   "[2026-11-08 07:37:50.165] [debug] Auto batchsize cuda:1: 32, time per chunk 0.145095 ms",
+   "[2026-11-08 07:37:50.165] [debug] Auto batchsize cuda:0: 32, time per chunk 0.145918 ms",
+   "[2026-11-08 07:37:50.182] [debug] Auto batchsize cuda:1: 64, time per chunk 0.090971 ms",
+   "[2026-11-08 07:37:50.182] [debug] Auto batchsize cuda:0: 64, time per chunk 0.091032 ms",
+   "[2026-11-08 07:37:50.202] [debug] Auto batchsize cuda:0: 96, time per chunk 0.078657 ms",
+   "[2026-11-08 07:37:50.202] [debug] Auto batchsize cuda:1: 96, time per chunk 0.077926 ms",
+   "[2026-11-08 07:37:50.225] [debug] Auto batchsize cuda:0: 128, time per chunk 0.070647 ms",
+   "[2026-11-08 07:37:50.225] [debug] Auto batchsize cuda:1: 128, time per chunk 0.070230 ms",
+   "[2026-11-08 07:37:50.255] [debug] Auto batchsize cuda:0: 160, time per chunk 0.072965 ms",
+   "[2026-11-08 07:37:50.255] [debug] Auto batchsize cuda:1: 160, time per chunk 0.072946 ms",
+   "[2026-11-08 07:37:50.287] [debug] Auto batchsize cuda:0: 192, time per chunk 0.068526 ms",
+   "[2026-11-08 07:37:50.287] [debug] Auto batchsize cuda:1: 192, time per chunk 0.068574 ms",
+   "[2026-11-08 07:37:50.323] [debug] Auto batchsize cuda:0: 224, time per chunk 0.065444 ms",
+   "[2026-11-08 07:37:50.323] [debug] Auto batchsize cuda:1: 224, time per chunk 0.065451 ms",
+   "[2026-11-08 07:37:50.364] [debug] Auto batchsize cuda:0: 256, time per chunk 0.067974 ms",
+   "[2026-11-08 07:37:50.364] [debug] Auto batchsize cuda:1: 256, time per chunk 0.067580 ms",
+   "[2026-11-08 07:37:50.411] [debug] Auto batchsize cuda:0: 288, time per chunk 0.066909 ms",
+   "[2026-11-08 07:37:50.411] [debug] Auto batchsize cuda:1: 288, time per chunk 0.066229 ms",
+   "[2026-11-08 07:37:50.464] [debug] Auto batchsize cuda:0: 320, time per chunk 0.069782 ms",
+   "[2026-11-08 07:37:50.464] [debug] Auto batchsize cuda:1: 320, time per chunk 0.069712 ms",
+   "[2026-11-08 07:37:50.537] [debug] Auto batchsize cuda:0: 352, time per chunk 0.069044 ms",
+   "[2026-11-08 07:37:50.537] [debug] Auto batchsize cuda:1: 352, time per chunk 0.068238 ms",
+   "[2026-11-08 07:37:50.600] [debug] Auto batchsize cuda:0: 384, time per chunk 0.070650 ms",
+   "[2026-11-08 07:37:50.600] [debug] Auto batchsize cuda:1: 384, time per chunk 0.070727 ms",
+   "[2026-11-08 07:37:50.668] [debug] Auto batchsize cuda:0: 416, time per chunk 0.070076 ms",
+   "[2026-11-08 07:37:50.668] [debug] Auto batchsize cuda:1: 416, time per chunk 0.069604 ms",
+   "[2026-11-08 07:37:50.740] [debug] Auto batchsize cuda:0: 448, time per chunk 0.069690 ms",
+   "[2026-11-08 07:37:50.740] [debug] Auto batchsize cuda:1: 448, time per chunk 0.069092 ms",
+   "[2026-11-08 07:37:50.817] [debug] Auto batchsize cuda:0: 480, time per chunk 0.070711 ms",
+   "[2026-11-08 07:37:50.817] [debug] Auto batchsize cuda:1: 480, time per chunk 0.070608 ms",
+   "[2026-11-08 07:37:50.899] [debug] Auto batchsize cuda:0: 512, time per chunk 0.069945 ms"
+  ]
+ },
+ "throughput": {
+  "samples_per_s": null,
+  "padding_samples_per_s": null,
+  "useful_fraction": null,
+  "reads_per_s": null,
+  "peak_vram_mib": 21411,
+  "mean_gpu_util_pct": 99.9,
+  "mean_power_w": 599.5
+ },
+ "cost": {
+  "usd_hr": 2.38,
+  "usd_hr_source": "runpod NVIDIA GeForce RTX 5090 pod t6mlyh2gmzec91, rate at reservation 2026-11-08T06:53:18Z (harness ledger)",
+  "usd_run": 11.9004,
+  "usd_per_gbase": null
+ },
+ "output": {
+  "bam": null,
+  "reads_out": null,
+  "bases_out": null,
+  "reads_with_mm": null,
+  "mean_qscore": null,
+  "records_sha256": null
+ },
+ "notes": "no subset manifest at /workspace/dorado/soak/manifest.json; data fields unknown, proxy assumed; calls not written (soak run); read counts come from Dorado's log only"
+}

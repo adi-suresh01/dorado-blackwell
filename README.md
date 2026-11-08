@@ -33,8 +33,9 @@ the S3 sources and refuse to run unless reads, samples and the read-id digest ma
 
 - Dorado 2.1.2 (latest), Linux build sha256 `f4ed83ac...` (hashed here; ONT publishes none). Bundles CUDA 12.8;
   `bin/dorado` carries native sm_120 code (`logs/stage0/fatbin-archs-dorado-2.1.2-linux-x64.txt`).
-- Dorado 1.4.0 for the dorado#1507 soak comparison only.
-- Models: hac@v5.2.0, sup@v5.2.0, hac@v6.0.0 (2.1.2 has no DNA sup@v6.0.0), with 5mC_5hmC@v2 (v5.2) and @v1 (v6).
+- Dorado 1.4.0 for the dorado#1507 soaks only.
+- Models: hac@v5.2.0, sup@v5.2.0, hac@v6.0.0 (2.1.2 has no DNA sup@v6.0.0), with 5mC_5hmC@v2 (v5.2) and @v1 (v6);
+  sup@v5.2.0 4mC_5mC@v1 and 6mA@v1 for the 5 h soak only.
 - Base image `nvidia/cuda:12.8.1-base-ubuntu24.04` by digest; modkit 0.6.4; pod5 0.3.49; pysam 0.24.1.
 
 ## Layout
@@ -65,6 +66,6 @@ the S3 sources and refuse to run unless reads, samples and the read-id digest ma
 
 ## Status
 
-All GPU runs done (2026-11-06/08): 116 runs on RTX 5090, RTX PRO 6000 Server, H100 PCIe and 2x RTX 5090, no
-crashes, $22.28 of GPU rental. Not tested: a soak longer than 3 h, a soak with the mismatched per-GPU batch sizes
+All GPU runs done (2026-11-06/08): 117 runs on RTX 5090, RTX PRO 6000 Server, H100 PCIe and 2x RTX 5090, no
+crashes, $36.26 of GPU rental. Not tested: a soak longer than 5 h, a soak with the mismatched per-GPU batch sizes
 seen in the dorado#1507 crash logs, data-center Blackwell (sm_100), and real cfDNA.
