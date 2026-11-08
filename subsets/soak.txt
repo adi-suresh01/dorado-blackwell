@@ -1,0 +1,10 @@
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_131.pod5
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_132.pod5
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_133.pod5
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_134.pod5
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_135.pod5
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_136.pod5
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_137.pod5
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_138.pod5
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_139.pod5
+https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_140.pod5

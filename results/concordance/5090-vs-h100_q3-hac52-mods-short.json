@@ -1,0 +1,30 @@
+{
+ "a": "RTX 5090 q3-hac52-mods-short",
+ "b": "H100 PCIe q3-hac52-mods-short",
+ "reads_a": 473184,
+ "reads_b": 473184,
+ "reads_common": 473184,
+ "reads_only_a": 0,
+ "reads_only_b": 0,
+ "pct_identical_sequence": 56.914434976668694,
+ "pct_identical_mm_ml_of_common": 6.838988638669101,
+ "pct_identical_mm_ml_given_same_sequence": 12.016263785228919,
+ "differing_reads_base_identity_median": 0.9813084112149533,
+ "differing_reads_base_identity_min": 0.23364485981308414,
+ "c_sites_compared": 8375521,
+ "pct_c_site_call_flips": 0.40044076064044254,
+ "cpg_sites_compared": 1822692,
+ "pct_cpg_site_call_flips": 0.3456425989689975,
+ "max_abs_mod_prob_diff": 0.998046875,
+ "aggregate_a": {
+  "cpg_sites": 3265732,
+  "cpg_5mC_rate": 0.11741410501535338,
+  "cpg_5hmC_rate": 0.10151414751731005
+ },
+ "aggregate_b": {
+  "cpg_sites": 3265940,
+  "cpg_5mC_rate": 0.11729456144325982,
+  "cpg_5hmC_rate": 0.10171221761575534
+ },
+ "edit_distance": "edlib"
+}

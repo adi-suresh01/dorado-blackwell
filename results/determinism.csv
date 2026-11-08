@@ -1,0 +1,109 @@
+config,gpu_a,gpu_b,identical_calls,digest_a,digest_b
+q1-dual-sup52-mods-short,2x RTX 5090,2x RTX 5090,True,101b892ea985,
+q1-dual-sup52-mods-short-b256,2x RTX 5090,2x RTX 5090,True,101b892ea985,
+q2-hac52-long,H100 PCIe,H100 PCIe,True,d2b9eb3ce001,
+q2-hac52-long,RTX 5090,RTX 5090,True,abc7282e5b62,
+q2-hac52-long,RTX PRO 6000 Server,RTX PRO 6000 Server,True,abc7282e5b62,
+q2-hac52-long,H100 PCIe,RTX 5090,False,d2b9eb3ce001,abc7282e5b62
+q2-hac52-long,H100 PCIe,RTX PRO 6000 Server,False,d2b9eb3ce001,abc7282e5b62
+q2-hac52-long,RTX 5090,RTX PRO 6000 Server,True,abc7282e5b62,abc7282e5b62
+q2-hac52-mods-long,H100 PCIe,H100 PCIe,True,8c7917371bbc,
+q2-hac52-mods-long,RTX 5090,RTX 5090,True,ef85e2f7eecb,
+q2-hac52-mods-long,RTX PRO 6000 Server,RTX PRO 6000 Server,True,ef85e2f7eecb,
+q2-hac52-mods-long,H100 PCIe,RTX 5090,False,8c7917371bbc,ef85e2f7eecb
+q2-hac52-mods-long,H100 PCIe,RTX PRO 6000 Server,False,8c7917371bbc,ef85e2f7eecb
+q2-hac52-mods-long,RTX 5090,RTX PRO 6000 Server,True,ef85e2f7eecb,ef85e2f7eecb
+q2-hac60-long,H100 PCIe,H100 PCIe,True,cef1a6867ff7,
+q2-hac60-long,RTX 5090,RTX 5090,True,1dca59cdcb8d,
+q2-hac60-long,RTX PRO 6000 Server,RTX PRO 6000 Server,True,1dca59cdcb8d,
+q2-hac60-long,H100 PCIe,RTX 5090,False,cef1a6867ff7,1dca59cdcb8d
+q2-hac60-long,H100 PCIe,RTX PRO 6000 Server,False,cef1a6867ff7,1dca59cdcb8d
+q2-hac60-long,RTX 5090,RTX PRO 6000 Server,True,1dca59cdcb8d,1dca59cdcb8d
+q2-hac60-mods-long,H100 PCIe,H100 PCIe,True,d975410e4979,
+q2-hac60-mods-long,RTX 5090,RTX 5090,True,d1c9473c0e72,
+q2-hac60-mods-long,RTX PRO 6000 Server,RTX PRO 6000 Server,True,d1c9473c0e72,
+q2-hac60-mods-long,H100 PCIe,RTX 5090,False,d975410e4979,d1c9473c0e72
+q2-hac60-mods-long,H100 PCIe,RTX PRO 6000 Server,False,d975410e4979,d1c9473c0e72
+q2-hac60-mods-long,RTX 5090,RTX PRO 6000 Server,True,d1c9473c0e72,d1c9473c0e72
+q2-sup52-long,H100 PCIe,H100 PCIe,True,6d51bb7dbf56,
+q2-sup52-long,RTX 5090,RTX 5090,True,da6ef87a5b4f,
+q2-sup52-long,RTX PRO 6000 Server,RTX PRO 6000 Server,True,da6ef87a5b4f,
+q2-sup52-long,H100 PCIe,RTX 5090,False,6d51bb7dbf56,da6ef87a5b4f
+q2-sup52-long,H100 PCIe,RTX PRO 6000 Server,False,6d51bb7dbf56,da6ef87a5b4f
+q2-sup52-long,RTX 5090,RTX PRO 6000 Server,True,da6ef87a5b4f,da6ef87a5b4f
+q2-sup52-mods-long,H100 PCIe,H100 PCIe,True,292c98d135a9,
+q2-sup52-mods-long,RTX 5090,RTX 5090,True,eddb601d4d9b,
+q2-sup52-mods-long,RTX PRO 6000 Server,RTX PRO 6000 Server,True,eddb601d4d9b,
+q2-sup52-mods-long,H100 PCIe,RTX 5090,False,292c98d135a9,eddb601d4d9b
+q2-sup52-mods-long,H100 PCIe,RTX PRO 6000 Server,False,292c98d135a9,eddb601d4d9b
+q2-sup52-mods-long,RTX 5090,RTX PRO 6000 Server,True,eddb601d4d9b,eddb601d4d9b
+q2x-hac60-mods-long-b1024,RTX 5090,RTX 5090,True,d1c9473c0e72,
+q2x-hac60-mods-long-b1536,RTX 5090,RTX 5090,True,d1c9473c0e72,
+q2x-hac60-mods-long-b2048,RTX 5090,RTX 5090,True,d1c9473c0e72,
+q3-hac52-mods-short,H100 PCIe,H100 PCIe,True,91edc85aa95e,
+q3-hac52-mods-short,RTX 5090,RTX 5090,True,45bef8bb9059,
+q3-hac52-mods-short,RTX PRO 6000 Server,RTX PRO 6000 Server,True,45bef8bb9059,
+q3-hac52-mods-short,H100 PCIe,RTX 5090,False,91edc85aa95e,45bef8bb9059
+q3-hac52-mods-short,H100 PCIe,RTX PRO 6000 Server,False,91edc85aa95e,45bef8bb9059
+q3-hac52-mods-short,RTX 5090,RTX PRO 6000 Server,True,45bef8bb9059,45bef8bb9059
+q3-hac52-mods-short-c3000,H100 PCIe,H100 PCIe,True,ffcfea2ea203,
+q3-hac52-mods-short-c3000,RTX 5090,RTX 5090,True,2ba45961d4ef,
+q3-hac52-mods-short-c3000,RTX PRO 6000 Server,RTX PRO 6000 Server,True,2ba45961d4ef,
+q3-hac52-mods-short-c3000,H100 PCIe,RTX 5090,False,ffcfea2ea203,2ba45961d4ef
+q3-hac52-mods-short-c3000,H100 PCIe,RTX PRO 6000 Server,False,ffcfea2ea203,2ba45961d4ef
+q3-hac52-mods-short-c3000,RTX 5090,RTX PRO 6000 Server,True,2ba45961d4ef,2ba45961d4ef
+q3-hac52-short,H100 PCIe,H100 PCIe,True,966d9997bdfd,
+q3-hac52-short,RTX 5090,RTX 5090,True,ecf526206a18,
+q3-hac52-short,RTX PRO 6000 Server,RTX PRO 6000 Server,True,ecf526206a18,
+q3-hac52-short,H100 PCIe,RTX 5090,False,966d9997bdfd,ecf526206a18
+q3-hac52-short,H100 PCIe,RTX PRO 6000 Server,False,966d9997bdfd,ecf526206a18
+q3-hac52-short,RTX 5090,RTX PRO 6000 Server,True,ecf526206a18,ecf526206a18
+q3-hac60-mods-short,H100 PCIe,H100 PCIe,True,279a7d833d6b,
+q3-hac60-mods-short,RTX 5090,RTX 5090,True,83f6210c5541,
+q3-hac60-mods-short,RTX PRO 6000 Server,RTX PRO 6000 Server,True,83f6210c5541,
+q3-hac60-mods-short,H100 PCIe,RTX 5090,False,279a7d833d6b,83f6210c5541
+q3-hac60-mods-short,H100 PCIe,RTX PRO 6000 Server,False,279a7d833d6b,83f6210c5541
+q3-hac60-mods-short,RTX 5090,RTX PRO 6000 Server,True,83f6210c5541,83f6210c5541
+q3-hac60-short,H100 PCIe,H100 PCIe,True,1ecc0864dbfb,
+q3-hac60-short,RTX 5090,RTX 5090,True,97dc4644758d,
+q3-hac60-short,RTX PRO 6000 Server,RTX PRO 6000 Server,True,97dc4644758d,
+q3-hac60-short,H100 PCIe,RTX 5090,False,1ecc0864dbfb,97dc4644758d
+q3-hac60-short,H100 PCIe,RTX PRO 6000 Server,False,1ecc0864dbfb,97dc4644758d
+q3-hac60-short,RTX 5090,RTX PRO 6000 Server,True,97dc4644758d,97dc4644758d
+q3-sup52-mods-short,H100 PCIe,H100 PCIe,True,ce93c2d3460c,
+q3-sup52-mods-short,RTX 5090,RTX 5090,True,101b892ea985,
+q3-sup52-mods-short,RTX PRO 6000 Server,RTX PRO 6000 Server,True,101b892ea985,
+q3-sup52-mods-short,H100 PCIe,RTX 5090,False,ce93c2d3460c,101b892ea985
+q3-sup52-mods-short,H100 PCIe,RTX PRO 6000 Server,False,ce93c2d3460c,101b892ea985
+q3-sup52-mods-short,RTX 5090,RTX PRO 6000 Server,True,101b892ea985,101b892ea985
+q3-sup52-mods-short-fixedchunk,H100 PCIe,H100 PCIe,True,e45c2f08c58e,
+q3-sup52-mods-short-fixedchunk,RTX 5090,RTX 5090,True,e88ba9e87123,
+q3-sup52-mods-short-fixedchunk,RTX PRO 6000 Server,RTX PRO 6000 Server,True,e88ba9e87123,
+q3-sup52-mods-short-fixedchunk,H100 PCIe,RTX 5090,False,e45c2f08c58e,e88ba9e87123
+q3-sup52-mods-short-fixedchunk,H100 PCIe,RTX PRO 6000 Server,False,e45c2f08c58e,e88ba9e87123
+q3-sup52-mods-short-fixedchunk,RTX 5090,RTX PRO 6000 Server,True,e88ba9e87123,e88ba9e87123
+q3-sup52-short,H100 PCIe,H100 PCIe,True,f421e621eb03,
+q3-sup52-short,RTX 5090,RTX 5090,True,a891c4b9ee07,
+q3-sup52-short,RTX PRO 6000 Server,RTX PRO 6000 Server,True,a891c4b9ee07,
+q3-sup52-short,H100 PCIe,RTX 5090,False,f421e621eb03,a891c4b9ee07
+q3-sup52-short,H100 PCIe,RTX PRO 6000 Server,False,f421e621eb03,a891c4b9ee07
+q3-sup52-short,RTX 5090,RTX PRO 6000 Server,True,a891c4b9ee07,a891c4b9ee07
+q3x-hac60-mods-short-b1024,RTX 5090,RTX 5090,True,83f6210c5541,
+q4-hac60-mods-short-b256,H100 PCIe,H100 PCIe,True,279a7d833d6b,
+q4-hac60-mods-short-b256,RTX 5090,RTX 5090,True,83f6210c5541,
+q4-hac60-mods-short-b256,RTX PRO 6000 Server,RTX PRO 6000 Server,True,83f6210c5541,
+q4-hac60-mods-short-b256,H100 PCIe,RTX 5090,False,279a7d833d6b,83f6210c5541
+q4-hac60-mods-short-b256,H100 PCIe,RTX PRO 6000 Server,False,279a7d833d6b,83f6210c5541
+q4-hac60-mods-short-b256,RTX 5090,RTX PRO 6000 Server,True,83f6210c5541,83f6210c5541
+q4-sup52-mods-short-b256,H100 PCIe,H100 PCIe,True,ce93c2d3460c,
+q4-sup52-mods-short-b256,RTX 5090,RTX 5090,True,101b892ea985,
+q4-sup52-mods-short-b256,RTX PRO 6000 Server,RTX PRO 6000 Server,True,101b892ea985,
+q4-sup52-mods-short-b256,H100 PCIe,RTX 5090,False,ce93c2d3460c,101b892ea985
+q4-sup52-mods-short-b256,H100 PCIe,RTX PRO 6000 Server,False,ce93c2d3460c,101b892ea985
+q4-sup52-mods-short-b256,RTX 5090,RTX PRO 6000 Server,True,101b892ea985,101b892ea985
+q4-sup52-mods-short-b512,H100 PCIe,H100 PCIe,True,ce93c2d3460c,
+q4-sup52-mods-short-b512,RTX 5090,RTX 5090,True,101b892ea985,
+q4-sup52-mods-short-b512,RTX PRO 6000 Server,RTX PRO 6000 Server,True,101b892ea985,
+q4-sup52-mods-short-b512,H100 PCIe,RTX 5090,False,ce93c2d3460c,101b892ea985
+q4-sup52-mods-short-b512,H100 PCIe,RTX PRO 6000 Server,False,ce93c2d3460c,101b892ea985
+q4-sup52-mods-short-b512,RTX 5090,RTX PRO 6000 Server,True,101b892ea985,101b892ea985

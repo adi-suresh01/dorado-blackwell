@@ -1,0 +1,110 @@
+{
+ "schema_version": 1,
+ "run_id": "NVIDIA-H100-PCIe_q3-hac60-short_r1_20261107T033232Z",
+ "question": "Q3",
+ "config_id": "q3-hac60-short",
+ "repeat": 1,
+ "started_utc": "20261107T033232Z",
+ "host": {
+  "provider": "runpod",
+  "pod_id": "jbecp47w5t9d4j",
+  "image": "nvidia/cuda:12.8.1-base-ubuntu24.04@sha256:133c78a0575303be34164d0b90137a042172bdf60696af01a3c424ab402d86e2",
+  "gpu_name": "NVIDIA H100 PCIe",
+  "gpu_count": 1,
+  "driver_version": "595.91.07",
+  "cuda_driver_version": "13.2",
+  "compute_cap": "9.0",
+  "vram_mib": 81559,
+  "power_limit_w": 310.0,
+  "gpu_uuids": [
+   "GPU-8b3a7223-6c21-f92f-187c-dbc628ce1609"
+  ],
+  "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+  "cpu_threads": 128,
+  "host_ram_gib": 2015.5,
+  "kernel": "6.8.0-138-generic"
+ },
+ "dorado": {
+  "version": "2.1.2+8b8fc5d",
+  "build_sha256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485",
+  "simplex_model": "dna_r10.4.1_e8.2_400bps_hac@v6.0.0",
+  "mods_models": []
+ },
+ "args": {
+  "command": [
+   "/workspace/dorado/dorado-2.1.2-linux-x64/bin/dorado",
+   "basecaller",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0",
+   "/workspace/dorado/subsets/short-155bp",
+   "--device",
+   "cuda:0",
+   "--batchsize",
+   "0",
+   "-v"
+  ],
+  "device": "cuda:0",
+  "batchsize_requested": 0,
+  "chunksize_requested": null,
+  "overlap_requested": null,
+  "mods_batchsize_requested": null,
+  "env": {
+   "CUDA_VERSION": "12.8.1",
+   "DORADO_BUILD_SHA256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485"
+  }
+ },
+ "data": {
+  "subset_id": "short-155bp",
+  "proxy": true,
+  "source": "ONT open data modbase-validation_2024.10 subset/ (155 bp synthetic constructs, 5mC/5hmC ground truth), signal_positive reads of 1000-6000 samples; proxy, not cfDNA",
+  "reads": 473185,
+  "total_samples": 1046600811,
+  "sample_rate_hz": 5000,
+  "read_ids_sha256": "db81fc9a6909427626073a567dd16ccb365c428555c54fe18b8620fda2dd399f"
+ },
+ "result": {
+  "exit_code": 0,
+  "time_limited": false,
+  "crashed": false,
+  "error_lines": [],
+  "wall_s": 18.196,
+  "dorado_finished_ms": 14268
+ },
+ "batching": {
+  "batchsize_used": 2688,
+  "chunksize_used": 12288,
+  "batchsize_from_benchmark_table": true,
+  "log_lines": [
+   "[2026-11-07 03:32:33.482] [info] Running: \"basecaller\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0\" \"/workspace/dorado/subsets/short-155bp\" \"--device\" \"cuda:0\" \"--batchsize\" \"0\" \"-v\"",
+   "[2026-11-07 03:32:34.016] [debug] Fastest capped+limited batch size is 2688 @ 86523800",
+   "[2026-11-07 03:32:35.069] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 7744",
+   "[2026-11-07 03:32:35.069] [debug] cuda:0 maximum safe estimated batch size at chunk size 6144 is 15488",
+   "[2026-11-07 03:32:35.070] [debug] cuda:0 using chunk size 12288, batch size 2688",
+   "[2026-11-07 03:32:35.588] [debug] cuda:0 using chunk size 6144, batch size 2688",
+   "[2026-11-07 03:32:36.072] [debug] BasecallerNode chunk size 12288",
+   "[2026-11-07 03:32:36.073] [debug] BasecallerNode chunk size 6144"
+  ]
+ },
+ "throughput": {
+  "samples_per_s": 73021370.0,
+  "padding_samples_per_s": 75240000.0,
+  "useful_fraction": 0.97051,
+  "reads_per_s": 33163.86,
+  "peak_vram_mib": 36211,
+  "mean_gpu_util_pct": 69.2,
+  "mean_power_w": 243.4
+ },
+ "cost": {
+  "usd_hr": 2.89,
+  "usd_hr_source": "runpod NVIDIA H100 PCIe pod jbecp47w5t9d4j, rate at reservation 2026-11-07T02:54:10Z (harness ledger)",
+  "usd_run": 0.01461,
+  "usd_per_gbase": 0.2507
+ },
+ "output": {
+  "bam": "calls.bam",
+  "reads_out": 473182,
+  "bases_out": 58271454,
+  "reads_with_mm": 0,
+  "mean_qscore": 12.101,
+  "records_sha256": "1ecc0864dbfb733f7fd39be82670f6aff7c514fd4cef39ae6b9821410e82e9e2"
+ }
+}

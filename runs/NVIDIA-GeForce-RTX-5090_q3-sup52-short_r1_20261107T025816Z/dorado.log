@@ -1,0 +1,22 @@
+[2026-11-07 02:58:17.157] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0" "/workspace/dorado/subsets/short-155bp" "--device" "cuda:0" "--batchsize" "0" "-v"
+[2026-11-07 02:58:17.413] [info] Using CUDA devices:
+[2026-11-07 02:58:17.414] [info] cuda:0 - NVIDIA GeForce RTX 5090
+[2026-11-07 02:58:17.417] [debug] cuda:0 memory available: 33.14GB
+[2026-11-07 02:58:17.418] [debug] Fastest capped+limited batch size is 384 @ 19696600
+[2026-11-07 02:58:17.422] [debug] TxEncoderStack: use_koi_tiled true.
+[2026-11-07 02:58:17.422] [debug] TxEncoderStack: use_koi_volta_tiled false.
+[2026-11-07 02:58:20.995] [debug] cuda:0 memory available: 32.76GB
+[2026-11-07 02:58:20.996] [debug] cuda:0 memory limit 31.76GB
+[2026-11-07 02:58:20.996] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 384
+[2026-11-07 02:58:20.996] [debug] cuda:0 using chunk size 12288, batch size 384
+[2026-11-07 02:58:20.996] [debug] cuda:0 Model memory 27.41GB
+[2026-11-07 02:58:20.996] [debug] cuda:0 Decode memory 3.33GB
+[2026-11-07 02:58:21.383] [info] > Creating basecall pipeline
+[2026-11-07 02:58:21.385] [debug] BasecallerNode chunk size 12288
+[2026-11-07 02:58:21.401] [debug] Load reads from file /workspace/dorado/subsets/short-155bp/short-155bp.pod5
+[2026-11-07 02:59:18.773] [info] > Finished in (ms): 57373
+[2026-11-07 02:59:18.774] [info] > Simplex reads basecalled: 473184
+[2026-11-07 02:59:18.774] [info] > Simplex reads filtered: 1
+[2026-11-07 02:59:18.774] [info] > Basecalled @ Samples/s: 1.815957e+07
+[2026-11-07 02:59:18.774] [debug] > Including Padding @ Samples/s: 2.147e+07 (84.60%)
+[2026-11-07 02:59:18.775] [info] > Finished

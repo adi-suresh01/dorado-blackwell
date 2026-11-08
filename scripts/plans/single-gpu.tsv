@@ -1,0 +1,43 @@
+# Q2-Q4 on one GPU. Same plan on RTX 5090, RTX PRO 6000 and H100, so every row compares across GPUs.
+# Columns: question config repeat model mods subset batchsize chunksize time_limit_s dorado extra ("-" = none).
+# model/mods name pins.env variables (M_<name>); batchsize 0 = Dorado picks. Long and short subsets hold the same
+# total signal samples (subsets/*/manifest.json), so long vs short isolates read length.
+#
+# Q2 throughput on normal-length reads (HG002, proxy)
+Q2	q2-hac52-long	1	HAC52	-	long-hg002	0	-	-	-	-
+Q2	q2-hac52-long	2	HAC52	-	long-hg002	0	-	-	-	-
+Q2	q2-hac52-mods-long	1	HAC52	HAC52_5MC5HMC	long-hg002	0	-	-	-	-
+Q2	q2-hac52-mods-long	2	HAC52	HAC52_5MC5HMC	long-hg002	0	-	-	-	-
+Q2	q2-sup52-long	1	SUP52	-	long-hg002	0	-	-	-	-
+Q2	q2-sup52-long	2	SUP52	-	long-hg002	0	-	-	-	-
+Q2	q2-sup52-mods-long	1	SUP52	SUP52_5MC5HMC	long-hg002	0	-	-	-	-
+Q2	q2-sup52-mods-long	2	SUP52	SUP52_5MC5HMC	long-hg002	0	-	-	-	-
+Q2	q2-hac60-long	1	HAC60	-	long-hg002	0	-	-	-	-
+Q2	q2-hac60-long	2	HAC60	-	long-hg002	0	-	-	-	-
+Q2	q2-hac60-mods-long	1	HAC60	HAC60_5MC5HMC	long-hg002	0	-	-	-	-
+Q2	q2-hac60-mods-long	2	HAC60	HAC60_5MC5HMC	long-hg002	0	-	-	-	-
+# Q3 the same configs on 155 bp reads (synthetic, proxy), plus the two chunking knobs short reads depend on
+Q3	q3-hac52-short	1	HAC52	-	short-155bp	0	-	-	-	-
+Q3	q3-hac52-short	2	HAC52	-	short-155bp	0	-	-	-	-
+Q3	q3-hac52-mods-short	1	HAC52	HAC52_5MC5HMC	short-155bp	0	-	-	-	-
+Q3	q3-hac52-mods-short	2	HAC52	HAC52_5MC5HMC	short-155bp	0	-	-	-	-
+Q3	q3-sup52-short	1	SUP52	-	short-155bp	0	-	-	-	-
+Q3	q3-sup52-short	2	SUP52	-	short-155bp	0	-	-	-	-
+Q3	q3-sup52-mods-short	1	SUP52	SUP52_5MC5HMC	short-155bp	0	-	-	-	-
+Q3	q3-sup52-mods-short	2	SUP52	SUP52_5MC5HMC	short-155bp	0	-	-	-	-
+Q3	q3-hac60-short	1	HAC60	-	short-155bp	0	-	-	-	-
+Q3	q3-hac60-short	2	HAC60	-	short-155bp	0	-	-	-	-
+Q3	q3-hac60-mods-short	1	HAC60	HAC60_5MC5HMC	short-155bp	0	-	-	-	-
+Q3	q3-hac60-mods-short	2	HAC60	HAC60_5MC5HMC	short-155bp	0	-	-	-	-
+# v2.1.0's variable chunk sizes for SUP target short reads; this turns them off to measure what they buy.
+Q3	q3-sup52-mods-short-fixedchunk	1	SUP52	SUP52_5MC5HMC	short-155bp	0	-	-	-	--disable-variable-chunk-sizes
+Q3	q3-sup52-mods-short-fixedchunk	2	SUP52	SUP52_5MC5HMC	short-155bp	0	-	-	-	--disable-variable-chunk-sizes
+# HAC pads every 155 bp read into a ~10k-sample chunk; a 3000-sample chunk tests whether less padding is faster.
+Q3	q3-hac52-mods-short-c3000	1	HAC52	HAC52_5MC5HMC	short-155bp	0	3000	-	-	-
+Q3	q3-hac52-mods-short-c3000	2	HAC52	HAC52_5MC5HMC	short-155bp	0	3000	-	-	-
+# Q4 calls under a fixed batch size, identical on every GPU, so a cross-GPU difference cannot come from batching
+Q4	q4-sup52-mods-short-b256	1	SUP52	SUP52_5MC5HMC	short-155bp	256	-	-	-	-
+Q4	q4-sup52-mods-short-b256	2	SUP52	SUP52_5MC5HMC	short-155bp	256	-	-	-	-
+Q4	q4-sup52-mods-short-b512	1	SUP52	SUP52_5MC5HMC	short-155bp	512	-	-	-	-
+Q4	q4-hac60-mods-short-b256	1	HAC60	HAC60_5MC5HMC	short-155bp	256	-	-	-	-
+Q4	q4-hac60-mods-short-b256	2	HAC60	HAC60_5MC5HMC	short-155bp	256	-	-	-	-

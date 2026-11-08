@@ -1,0 +1,10 @@
+PTX sm_120: 15
+SASS sm_61: 7
+SASS sm_70: 8
+SASS sm_75: 7
+SASS sm_80: 26
+SASS sm_86: 15
+SASS sm_89: 15
+SASS sm_90: 26
+SASS sm_100: 26
+SASS sm_120: 41

@@ -1,0 +1,27 @@
+{
+ "run_id": "NVIDIA-H100-PCIe_q3-hac52-mods-short-c3000_r2_20261107T034239Z",
+ "question": "Q3",
+ "config_id": "q3-hac52-mods-short-c3000",
+ "repeat": 2,
+ "started_utc": "20261107T034239Z",
+ "exit_code": 0,
+ "t0": 1794022959.361,
+ "t1": 1794023002.823,
+ "device": "cuda:0",
+ "batchsize": 0,
+ "chunksize": 3000,
+ "overlap": null,
+ "mods_batchsize": null,
+ "model": "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v5.2.0",
+ "mods": [
+  "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2"
+ ],
+ "subset": "short-155bp",
+ "data": "/workspace/dorado/subsets/short-155bp",
+ "dorado": "/workspace/dorado/dorado-2.1.2-linux-x64/bin/dorado",
+ "time_limit_s": null,
+ "env": {
+  "CUDA_VERSION": "12.8.1",
+  "DORADO_BUILD_SHA256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485"
+ }
+}

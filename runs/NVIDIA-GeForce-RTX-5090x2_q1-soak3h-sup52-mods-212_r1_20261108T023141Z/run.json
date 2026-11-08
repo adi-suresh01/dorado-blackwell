@@ -1,0 +1,27 @@
+{
+ "run_id": "NVIDIA-GeForce-RTX-5090x2_q1-soak3h-sup52-mods-212_r1_20261108T023141Z",
+ "question": "Q1",
+ "config_id": "q1-soak3h-sup52-mods-212",
+ "repeat": 1,
+ "started_utc": "20261108T023141Z",
+ "exit_code": 124,
+ "t0": 1794105101.075,
+ "t1": 1794115902.695,
+ "device": "cuda:all",
+ "batchsize": 0,
+ "chunksize": null,
+ "overlap": null,
+ "mods_batchsize": null,
+ "model": "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0",
+ "mods": [
+  "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2"
+ ],
+ "subset": "soak",
+ "data": "/workspace/dorado/soak",
+ "dorado": "/workspace/dorado/dorado-2.1.2-linux-x64/bin/dorado",
+ "time_limit_s": 10800,
+ "env": {
+  "CUDA_VERSION": "12.8.1",
+  "DORADO_BUILD_SHA256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485"
+ }
+}

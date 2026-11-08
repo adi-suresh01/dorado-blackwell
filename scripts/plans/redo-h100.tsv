@@ -1,0 +1,2 @@
+# Third repeats for configs whose r1 and r2 samples/s differ by more than 1.15x on NVIDIA H100 PCIe
+# (written by outlier_plan.py; same columns as the source plan)

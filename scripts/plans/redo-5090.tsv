@@ -1,0 +1,5 @@
+# Third repeats for configs whose r1 and r2 samples/s differ by more than 1.15x on NVIDIA GeForce RTX 5090
+# (written by outlier_plan.py; same columns as the source plan)
+Q3	q3-hac52-short	3	HAC52	-	short-155bp	0	-	-	-	-
+Q3	q3-hac60-short	3	HAC60	-	short-155bp	0	-	-	-	-
+Q3	q3-hac52-mods-short-c3000	3	HAC52	HAC52_5MC5HMC	short-155bp	0	3000	-	-	-

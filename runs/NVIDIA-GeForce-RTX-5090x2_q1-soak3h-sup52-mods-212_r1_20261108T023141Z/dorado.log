@@ -1,0 +1,43 @@
+[2026-11-08 02:31:41.442] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0" "/workspace/dorado/soak" "--device" "cuda:all" "--batchsize" "0" "-v" "--modified-bases-models" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2"
+[2026-11-08 02:31:42.621] [info] Using CUDA devices:
+[2026-11-08 02:31:42.621] [info] cuda:0 - NVIDIA GeForce RTX 5090
+[2026-11-08 02:31:42.621] [info] cuda:1 - NVIDIA GeForce RTX 5090
+[2026-11-08 02:31:43.414] [debug] cuda:0 memory available: 32.56GB
+[2026-11-08 02:31:43.414] [debug] cuda:1 memory available: 32.56GB
+[2026-11-08 02:31:43.414] [debug] Fastest capped+limited batch size is 384 @ 19696600
+[2026-11-08 02:31:43.415] [debug] Fastest capped+limited batch size is 384 @ 19696600
+[2026-11-08 02:31:43.424] [debug] TxEncoderStack: use_koi_tiled true.
+[2026-11-08 02:31:43.424] [debug] TxEncoderStack: use_koi_volta_tiled false.
+[2026-11-08 02:31:43.438] [debug] TxEncoderStack: use_koi_tiled true.
+[2026-11-08 02:31:43.438] [debug] TxEncoderStack: use_koi_volta_tiled false.
+[2026-11-08 02:31:45.361] [debug] cuda:0 memory available: 32.40GB
+[2026-11-08 02:31:45.361] [debug] cuda:0 memory limit 30.62GB
+[2026-11-08 02:31:45.361] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 352
+[2026-11-08 02:31:45.361] [warning] cuda:0: Requested batch size 384 exceeds maximum safe estimated batch size 352.
+[2026-11-08 02:31:45.361] [debug] cuda:0 using chunk size 12288, batch size 352
+[2026-11-08 02:31:45.361] [debug] cuda:0 Model memory 25.12GB
+[2026-11-08 02:31:45.361] [debug] cuda:0 Decode memory 3.05GB
+[2026-11-08 02:31:45.364] [debug] cuda:1 memory available: 32.40GB
+[2026-11-08 02:31:45.364] [debug] cuda:1 memory limit 30.62GB
+[2026-11-08 02:31:45.364] [debug] cuda:1 maximum safe estimated batch size at chunk size 12288 is 352
+[2026-11-08 02:31:45.364] [warning] cuda:1: Requested batch size 384 exceeds maximum safe estimated batch size 352.
+[2026-11-08 02:31:45.364] [debug] cuda:1 using chunk size 12288, batch size 352
+[2026-11-08 02:31:45.364] [debug] cuda:1 Model memory 25.12GB
+[2026-11-08 02:31:45.364] [debug] cuda:1 Decode memory 3.05GB
+[2026-11-08 02:31:45.901] [info] > Creating basecall pipeline
+[2026-11-08 02:31:45.903] [debug] BasecallerNode chunk size 12288
+[2026-11-08 02:31:46.570] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_131.pod5
+[2026-11-08 02:43:07.701] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_136.pod5
+[2026-11-08 02:55:25.213] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_135.pod5
+[2026-11-08 03:08:18.298] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_132.pod5
+[2026-11-08 03:20:16.464] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_134.pod5
+[2026-11-08 03:32:59.498] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_133.pod5
+[2026-11-08 03:45:15.143] [debug] Load reads from file /workspace/dorado/soak/copy2_PAW70337_66b2eea5_de8117b1_131.pod5
+[2026-11-08 03:56:54.735] [debug] Load reads from file /workspace/dorado/soak/copy3_PAW70337_66b2eea5_de8117b1_131.pod5
+[2026-11-08 04:08:33.953] [debug] Load reads from file /workspace/dorado/soak/copy4_PAW70337_66b2eea5_de8117b1_131.pod5
+[2026-11-08 04:20:13.107] [debug] Load reads from file /workspace/dorado/soak/copy2_PAW70337_66b2eea5_de8117b1_132.pod5
+[2026-11-08 04:32:17.246] [debug] Load reads from file /workspace/dorado/soak/copy3_PAW70337_66b2eea5_de8117b1_132.pod5
+[2026-11-08 04:44:21.803] [debug] Load reads from file /workspace/dorado/soak/copy4_PAW70337_66b2eea5_de8117b1_132.pod5
+[2026-11-08 04:56:26.381] [debug] Load reads from file /workspace/dorado/soak/copy2_PAW70337_66b2eea5_de8117b1_133.pod5
+[2026-11-08 05:08:41.266] [debug] Load reads from file /workspace/dorado/soak/copy3_PAW70337_66b2eea5_de8117b1_133.pod5
+[2026-11-08 05:20:56.609] [debug] Load reads from file /workspace/dorado/soak/copy4_PAW70337_66b2eea5_de8117b1_133.pod5

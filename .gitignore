@@ -1,0 +1,11 @@
+data/
+drafts/
+*.pod5
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.fq.gz
+tools/
+__pycache__/
+.DS_Store

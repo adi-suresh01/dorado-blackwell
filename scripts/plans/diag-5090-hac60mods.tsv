@@ -1,0 +1,12 @@
+# Diagnostic on one RTX 5090 (cuda:0 of the dual pod), run after the soak: hac@v6.0.0 + 5mC_5hmC@v1 on long reads ran
+# at 3.4e7 samples/s on the 5090 vs 8.2e7 on the PRO 6000, at 94% GPU use. At Dorado's own pick (batch 2624) the
+# basecaller holds 28.2 of the 28.7 GB it allows itself, leaving the mods model almost no memory. A capped basecaller
+# batch tests whether memory, not compute, is the limit; the calls must not change (batch size did not change calls
+# on any GPU in Q4).
+Q2	q2x-hac60-mods-long-b1024	1	HAC60	HAC60_5MC5HMC	long-hg002	1024	-	-	-	-
+Q2	q2x-hac60-mods-long-b1024	2	HAC60	HAC60_5MC5HMC	long-hg002	1024	-	-	-	-
+Q2	q2x-hac60-mods-long-b1536	1	HAC60	HAC60_5MC5HMC	long-hg002	1536	-	-	-	-
+Q2	q2x-hac60-mods-long-b1536	2	HAC60	HAC60_5MC5HMC	long-hg002	1536	-	-	-	-
+Q2	q2x-hac60-mods-long-b2048	1	HAC60	HAC60_5MC5HMC	long-hg002	2048	-	-	-	-
+Q2	q2x-hac60-mods-long-b2048	2	HAC60	HAC60_5MC5HMC	long-hg002	2048	-	-	-	-
+Q3	q3x-hac60-mods-short-b1024	1	HAC60	HAC60_5MC5HMC	short-155bp	1024	-	-	-	-

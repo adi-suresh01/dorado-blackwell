@@ -1,0 +1,6 @@
+{
+ "5mC_rep1.pod5": {"url": "https://ont-open-data.s3.amazonaws.com/modbase-validation_2024.10/subset/5mC_rep1.pod5", "sha256": "bc246f5e2c71d5b30b243bc8faf4a2c4b5adac56fd24a4dadab3e28e165a66a0", "bytes": 361402680},
+ "5hmC_rep1.pod5": {"url": "https://ont-open-data.s3.amazonaws.com/modbase-validation_2024.10/subset/5hmC_rep1.pod5", "sha256": "b539f40a698302ee172cfec495a2af1a77de07d17513a336f0987d31346fb965", "bytes": 373501024},
+ "control_rep1.pod5": {"url": "https://ont-open-data.s3.amazonaws.com/modbase-validation_2024.10/subset/control_rep1.pod5", "sha256": "97f81bd0632d2656eff835d99b4674c6dd381a7a084919cf18968b05fc8ee33a", "bytes": 374502312},
+ "PAW70337_66b2eea5_de8117b1_5.pod5": {"url": "https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_5.pod5", "sha256": "53e858c7cd915abf779de7674dab22e0c2e1c479e784a350db5494e80e380880", "bytes": 1090324672}
+}

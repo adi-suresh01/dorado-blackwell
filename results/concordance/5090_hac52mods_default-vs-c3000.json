@@ -1,0 +1,30 @@
+{
+ "a": "5090 hac52+mods default chunk",
+ "b": "5090 hac52+mods chunk 3000",
+ "reads_a": 473184,
+ "reads_b": 473184,
+ "reads_common": 473184,
+ "reads_only_a": 0,
+ "reads_only_b": 0,
+ "pct_identical_sequence": 90.77864002164063,
+ "pct_identical_mm_ml_of_common": 90.08229356867518,
+ "pct_identical_mm_ml_given_same_sequence": 99.2329181701781,
+ "differing_reads_base_identity_median": 0.9375,
+ "differing_reads_base_identity_min": 0.18518518518518523,
+ "c_sites_compared": 13295389,
+ "pct_c_site_call_flips": 0.0033996748797647065,
+ "cpg_sites_compared": 2794259,
+ "pct_cpg_site_call_flips": 0.0033640403412854712,
+ "max_abs_mod_prob_diff": 0.923828125,
+ "aggregate_a": {
+  "cpg_sites": 3265732,
+  "cpg_5mC_rate": 0.11741410501535338,
+  "cpg_5hmC_rate": 0.10151414751731005
+ },
+ "aggregate_b": {
+  "cpg_sites": 3256797,
+  "cpg_5mC_rate": 0.1191388348736504,
+  "cpg_5hmC_rate": 0.10206899601049743
+ },
+ "edit_distance": "edlib"
+}

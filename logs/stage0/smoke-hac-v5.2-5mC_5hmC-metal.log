@@ -1,0 +1,104 @@
+[2026-11-06 17:57:33.507] [info] Running: "basecaller" "hac@v5.2.0,5mC_5hmC" "data/smoke/" "--models-directory" "tools/models" "-v"
+[2026-11-06 17:57:33.516] [info] Assuming cert location is /etc/ssl/cert.pem
+[2026-11-06 17:57:33.521] [info]  - downloading dna_r10.4.1_e8.2_400bps_hac@v5.2.0 with foundation
+[2026-11-06 17:57:37.429] [info]  - downloading dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2 with foundation
+[2026-11-06 17:57:41.826] [debug] No batch size timings for Apple M4 Pro/dna_r10.4.1_e8.2_400bps_hac@v5.2.0
+[2026-11-06 17:57:41.826] [info] Failed to find optimal batch size for metal. Consider generating a benchmark with --run-batchsize-benchmarks, or loading an existing benchmark with --batchsize-benchmarks-file
+[2026-11-06 17:57:41.833] [debug] Physical/Usable memory available: 24/24 GB
+[2026-11-06 17:57:41.833] [debug] Retrieved GPU core count of 16 from IO Registry
+[2026-11-06 17:57:41.833] [debug] Trying batch size 192
+[2026-11-06 17:57:41.833] [debug] Linear layer split 1
+[2026-11-06 17:57:41.834] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:42.091] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:43.073] [debug] Batch 830036 us Batch element 4323 us
+[2026-11-06 17:57:43.074] [debug] Trying batch size 240
+[2026-11-06 17:57:43.074] [debug] Linear layer split 1
+[2026-11-06 17:57:43.074] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:43.075] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:43.944] [debug] Batch 826265 us Batch element 3442 us
+[2026-11-06 17:57:43.944] [debug] Trying batch size 288
+[2026-11-06 17:57:43.944] [debug] Linear layer split 1
+[2026-11-06 17:57:43.944] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:43.945] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:44.815] [debug] Batch 834922 us Batch element 2899 us
+[2026-11-06 17:57:44.815] [debug] Trying batch size 336
+[2026-11-06 17:57:44.815] [debug] Linear layer split 1
+[2026-11-06 17:57:44.815] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:44.816] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:45.687] [debug] Batch 836622 us Batch element 2489 us
+[2026-11-06 17:57:45.687] [debug] Trying batch size 384
+[2026-11-06 17:57:45.687] [debug] Linear layer split 1
+[2026-11-06 17:57:45.687] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:45.688] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:46.561] [debug] Batch 841667 us Batch element 2191 us
+[2026-11-06 17:57:46.561] [debug] Trying batch size 432
+[2026-11-06 17:57:46.561] [debug] Linear layer split 1
+[2026-11-06 17:57:46.561] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:46.562] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:47.436] [debug] Batch 839789 us Batch element 1943 us
+[2026-11-06 17:57:47.436] [debug] Trying batch size 480
+[2026-11-06 17:57:47.436] [debug] Linear layer split 2
+[2026-11-06 17:57:47.436] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:47.437] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:48.313] [debug] Batch 844639 us Batch element 1759 us
+[2026-11-06 17:57:48.313] [debug] Trying batch size 528
+[2026-11-06 17:57:48.313] [debug] Linear layer split 11
+[2026-11-06 17:57:48.314] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:48.314] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:49.209] [debug] Batch 852423 us Batch element 1614 us
+[2026-11-06 17:57:49.209] [debug] Trying batch size 576
+[2026-11-06 17:57:49.209] [debug] Linear layer split 2
+[2026-11-06 17:57:49.209] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:49.210] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:50.100] [debug] Batch 852087 us Batch element 1479 us
+[2026-11-06 17:57:50.100] [debug] Trying batch size 624
+[2026-11-06 17:57:50.100] [debug] Linear layer split 13
+[2026-11-06 17:57:50.100] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:50.100] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:50.986] [debug] Batch 852351 us Batch element 1365 us
+[2026-11-06 17:57:50.986] [debug] Trying batch size 672
+[2026-11-06 17:57:50.986] [debug] Linear layer split 2
+[2026-11-06 17:57:50.986] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:50.987] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:51.877] [debug] Batch 854605 us Batch element 1271 us
+[2026-11-06 17:57:51.877] [debug] Trying batch size 720
+[2026-11-06 17:57:51.877] [debug] Linear layer split 3
+[2026-11-06 17:57:51.877] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:51.878] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:52.770] [debug] Batch 860741 us Batch element 1195 us
+[2026-11-06 17:57:52.771] [debug] Trying batch size 768
+[2026-11-06 17:57:52.771] [debug] Linear layer split 2
+[2026-11-06 17:57:52.771] [debug] lstm_chunk_size 300 => 15 LSTM kernel launches
+[2026-11-06 17:57:52.771] [debug] conv3 output_time_step_count 300 => 15 kernel launches
+[2026-11-06 17:57:53.690] [debug] Batch 886013 us Batch element 1153 us
+[2026-11-06 17:57:53.690] [debug] Linear layer split 16
+[2026-11-06 17:57:53.690] [debug] lstm_chunk_size 1666 => 84 LSTM kernel launches
+[2026-11-06 17:57:53.692] [debug] conv3 output_time_step_count 1666 => 84 kernel launches
+[2026-11-06 17:57:53.735] [debug] Retrieved CPU performance core count of 8 from sysctl
+[2026-11-06 17:57:53.744] [info]  - set batch size to 768
+[2026-11-06 17:57:53.744] [info] > Creating basecall pipeline
+[2026-11-06 17:57:53.744] [debug] BasecallerNode chunk size 9996
+[2026-11-06 17:57:53.747] [debug] Load reads from file data/smoke/lsk114_5khz_test.pod5
+[2026-11-06 17:57:58.835] [info] > Finished in (ms): 5087
+[2026-11-06 17:57:58.835] [info] > Simplex reads basecalled: 1
+[2026-11-06 17:57:58.835] [info] > Basecalled @ Samples/s: 4.006291e+02
+[2026-11-06 17:57:58.835] [debug] > Including Padding @ Samples/s: 1.509e+06 (0.03%)
+[2026-11-06 17:57:58.872] [info] > Finished
+       25.60 real         0.85 user         1.02 sys
+           377389056  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              163554  page reclaims
+                3945  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   4  messages sent
+                   4  messages received
+                   0  signals received
+                 232  voluntary context switches
+               31039  involuntary context switches
+         18523415837  instructions retired
+          6439756833  cycles elapsed
+          4913005936  peak memory footprint

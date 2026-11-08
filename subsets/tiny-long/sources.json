@@ -1,0 +1,14 @@
+{
+ "subset_id": "tiny-long",
+ "note": "ONT open data giab_2025.01 HG002 PAW70337 (genomic DNA), signal_positive reads of >= 50000 samples in read-id order, total matched to the short subset; proxy, not cfDNA; matched to tiny-short",
+ "reads": 14,
+ "total_samples": 4502902,
+ "sources": [
+  {
+   "url": "https://ont-open-data.s3.amazonaws.com/giab_2025.01/flowcells/HG002/PAW70337/pod5/PAW70337_66b2eea5_de8117b1_5.pod5",
+   "sha256": "53e858c7cd915abf779de7674dab22e0c2e1c479e784a350db5494e80e380880",
+   "bytes": 1090324672,
+   "file": "PAW70337_66b2eea5_de8117b1_5.pod5"
+  }
+ ]
+}

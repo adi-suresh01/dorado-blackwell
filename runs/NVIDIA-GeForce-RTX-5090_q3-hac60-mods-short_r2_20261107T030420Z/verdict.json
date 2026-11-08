@@ -1,0 +1,115 @@
+{
+ "schema_version": 1,
+ "run_id": "NVIDIA-GeForce-RTX-5090_q3-hac60-mods-short_r2_20261107T030420Z",
+ "question": "Q3",
+ "config_id": "q3-hac60-mods-short",
+ "repeat": 2,
+ "started_utc": "20261107T030420Z",
+ "host": {
+  "provider": "runpod",
+  "pod_id": "874umi9isqo5i7",
+  "image": "nvidia/cuda:12.8.1-base-ubuntu24.04@sha256:133c78a0575303be34164d0b90137a042172bdf60696af01a3c424ab402d86e2",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "gpu_count": 1,
+  "driver_version": "595.91.07",
+  "cuda_driver_version": "13.2",
+  "compute_cap": "12.0",
+  "vram_mib": 32607,
+  "power_limit_w": 575.0,
+  "gpu_uuids": [
+   "GPU-bb67bbba-213f-3b86-2342-7f249262e85e"
+  ],
+  "cpu_model": "AMD Ryzen 9 9950X 16-Core Processor",
+  "cpu_threads": 32,
+  "host_ram_gib": 186.3,
+  "kernel": "6.8.0-147-generic"
+ },
+ "dorado": {
+  "version": "2.1.2+8b8fc5d",
+  "build_sha256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485",
+  "simplex_model": "dna_r10.4.1_e8.2_400bps_hac@v6.0.0",
+  "mods_models": [
+   "dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1"
+  ]
+ },
+ "args": {
+  "command": [
+   "/workspace/dorado/dorado-2.1.2-linux-x64/bin/dorado",
+   "basecaller",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0",
+   "/workspace/dorado/subsets/short-155bp",
+   "--device",
+   "cuda:0",
+   "--batchsize",
+   "0",
+   "-v",
+   "--modified-bases-models",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1"
+  ],
+  "device": "cuda:0",
+  "batchsize_requested": 0,
+  "chunksize_requested": null,
+  "overlap_requested": null,
+  "mods_batchsize_requested": null,
+  "env": {
+   "CUDA_VERSION": "12.8.1",
+   "DORADO_BUILD_SHA256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485"
+  }
+ },
+ "data": {
+  "subset_id": "short-155bp",
+  "proxy": true,
+  "source": "ONT open data modbase-validation_2024.10 subset/ (155 bp synthetic constructs, 5mC/5hmC ground truth), signal_positive reads of 1000-6000 samples; proxy, not cfDNA",
+  "reads": 473185,
+  "total_samples": 1046600811,
+  "sample_rate_hz": 5000,
+  "read_ids_sha256": "db81fc9a6909427626073a567dd16ccb365c428555c54fe18b8620fda2dd399f"
+ },
+ "result": {
+  "exit_code": 0,
+  "time_limited": false,
+  "crashed": false,
+  "error_lines": [],
+  "wall_s": 17.799,
+  "dorado_finished_ms": 15427
+ },
+ "batching": {
+  "batchsize_used": 2624,
+  "chunksize_used": 12288,
+  "batchsize_from_benchmark_table": true,
+  "log_lines": [
+   "[2026-11-07 03:04:21.033] [info] Running: \"basecaller\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0\" \"/workspace/dorado/subsets/short-155bp\" \"--device\" \"cuda:0\" \"--batchsize\" \"0\" \"-v\" \"--modified-bases-models\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1\"",
+   "[2026-11-07 03:04:21.586] [debug] Fastest capped+limited batch size is 2688 @ 93011500",
+   "[2026-11-07 03:04:21.864] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 2624",
+   "[2026-11-07 03:04:21.864] [warning] cuda:0: Requested batch size 2688 exceeds maximum safe estimated batch size 2624.",
+   "[2026-11-07 03:04:21.864] [debug] cuda:0 maximum safe estimated batch size at chunk size 6144 is 5312",
+   "[2026-11-07 03:04:21.864] [debug] cuda:0 using chunk size 12288, batch size 2624",
+   "[2026-11-07 03:04:22.632] [debug] cuda:0 using chunk size 6144, batch size 2688",
+   "[2026-11-07 03:04:22.919] [debug] BasecallerNode chunk size 12288",
+   "[2026-11-07 03:04:22.919] [debug] BasecallerNode chunk size 6144"
+  ]
+ },
+ "throughput": {
+  "samples_per_s": 67535420.0,
+  "padding_samples_per_s": 69580000.0,
+  "useful_fraction": 0.97062,
+  "reads_per_s": 30672.46,
+  "peak_vram_mib": 19726,
+  "mean_gpu_util_pct": 80.3,
+  "mean_power_w": 478.4
+ },
+ "cost": {
+  "usd_hr": 1.19,
+  "usd_hr_source": "runpod NVIDIA GeForce RTX 5090 pod 874umi9isqo5i7, rate at reservation 2026-11-07T02:40:51Z (harness ledger)",
+  "usd_run": 0.00588,
+  "usd_per_gbase": 0.1008
+ },
+ "output": {
+  "bam": "calls.bam",
+  "reads_out": 473184,
+  "bases_out": 58335726,
+  "reads_with_mm": 473184,
+  "mean_qscore": 12.142,
+  "records_sha256": "83f6210c5541266514bbc793abdfd9d100ebf49b62b8ffc5712a86b5c7b5f26c"
+ }
+}

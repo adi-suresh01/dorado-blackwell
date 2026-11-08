@@ -1,0 +1,13 @@
+# Q1 on 2x RTX 5090 with --device cuda:all, the only setup dorado#1507's crashes were reported on (sup@v5.2.0 plus a
+# mods model, both GPUs, crash after 1.5-10 h). Same columns as single-gpu.tsv; device comes from the runner's
+# --device (cuda:all here).
+#
+# Auto batch on two identical GPUs: #1507's log shows the two 5090s picking different batch sizes. These runs log
+# each device's pick, and the repeat pair shows whether the calls still match run to run.
+Q1	q1-dual-sup52-mods-short	1	SUP52	SUP52_5MC5HMC	short-155bp	0	-	-	-	-
+Q1	q1-dual-sup52-mods-short	2	SUP52	SUP52_5MC5HMC	short-155bp	0	-	-	-	-
+Q1	q1-dual-sup52-mods-short-b256	1	SUP52	SUP52_5MC5HMC	short-155bp	256	-	-	-	-
+Q1	q1-dual-sup52-mods-short-b256	2	SUP52	SUP52_5MC5HMC	short-155bp	256	-	-	-	-
+# The soak: the reporter's model pair on the current release, time-boxed at 90 min over HG002 files (proxy).
+Q1	q1-soak-sup52-mods-212	1	SUP52	SUP52_5MC5HMC	soak	0	-	5400	2.1.2	-
+# The 1.4.0 comparison is plans/dual-5090-soak140.tsv, started by hand only after this soak held for the full box.

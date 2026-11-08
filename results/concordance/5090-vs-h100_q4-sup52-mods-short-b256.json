@@ -1,0 +1,30 @@
+{
+ "a": "RTX 5090 q4-sup52-mods-short-b256",
+ "b": "H100 PCIe q4-sup52-mods-short-b256",
+ "reads_a": 473185,
+ "reads_b": 473184,
+ "reads_common": 473184,
+ "reads_only_a": 1,
+ "reads_only_b": 0,
+ "pct_identical_sequence": 56.45520558598769,
+ "pct_identical_mm_ml_of_common": 18.712382498140258,
+ "pct_identical_mm_ml_given_same_sequence": 33.14553955461056,
+ "differing_reads_base_identity_median": 0.9814814814814815,
+ "differing_reads_base_identity_min": 0.176056338028169,
+ "c_sites_compared": 8263402,
+ "pct_c_site_call_flips": 0.3082749695585426,
+ "cpg_sites_compared": 1904737,
+ "pct_cpg_site_call_flips": 0.24376068717098476,
+ "max_abs_mod_prob_diff": 0.998046875,
+ "aggregate_a": {
+  "cpg_sites": 3554751,
+  "cpg_5mC_rate": 0.10269805114338529,
+  "cpg_5hmC_rate": 0.08800728939945442
+ },
+ "aggregate_b": {
+  "cpg_sites": 3554834,
+  "cpg_5mC_rate": 0.10271562610237216,
+  "cpg_5hmC_rate": 0.08797766646768879
+ },
+ "edit_distance": "edlib"
+}

@@ -1,0 +1,117 @@
+{
+ "schema_version": 1,
+ "run_id": "NVIDIA-GeForce-RTX-5090x2_q1-dual-sup52-mods-short_r1_20261107T031005Z",
+ "question": "Q1",
+ "config_id": "q1-dual-sup52-mods-short",
+ "repeat": 1,
+ "started_utc": "20261107T031005Z",
+ "host": {
+  "provider": "runpod",
+  "pod_id": "pblsqn1wq0prsv",
+  "image": "nvidia/cuda:12.8.1-base-ubuntu24.04@sha256:133c78a0575303be34164d0b90137a042172bdf60696af01a3c424ab402d86e2",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "gpu_count": 2,
+  "driver_version": "595.91.07",
+  "cuda_driver_version": "13.2",
+  "compute_cap": "12.0",
+  "vram_mib": 32607,
+  "power_limit_w": 600.0,
+  "gpu_uuids": [
+   "GPU-af0a28ad-614f-de40-e5dc-a73a9decc760",
+   "GPU-d12560c1-445b-b809-f87f-e106b0748a2e"
+  ],
+  "cpu_model": "AMD Ryzen 9 9950X 16-Core Processor",
+  "cpu_threads": 32,
+  "host_ram_gib": 123.4,
+  "kernel": "6.8.0-147-generic"
+ },
+ "dorado": {
+  "version": "2.1.2+8b8fc5d",
+  "build_sha256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485",
+  "simplex_model": "dna_r10.4.1_e8.2_400bps_sup@v5.2.0",
+  "mods_models": [
+   "dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2"
+  ]
+ },
+ "args": {
+  "command": [
+   "/workspace/dorado/dorado-2.1.2-linux-x64/bin/dorado",
+   "basecaller",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0",
+   "/workspace/dorado/subsets/short-155bp",
+   "--device",
+   "cuda:all",
+   "--batchsize",
+   "0",
+   "-v",
+   "--modified-bases-models",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2"
+  ],
+  "device": "cuda:all",
+  "batchsize_requested": 0,
+  "chunksize_requested": null,
+  "overlap_requested": null,
+  "mods_batchsize_requested": null,
+  "env": {
+   "CUDA_VERSION": "12.8.1",
+   "DORADO_BUILD_SHA256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485"
+  }
+ },
+ "data": {
+  "subset_id": "short-155bp",
+  "proxy": true,
+  "source": "ONT open data modbase-validation_2024.10 subset/ (155 bp synthetic constructs, 5mC/5hmC ground truth), signal_positive reads of 1000-6000 samples; proxy, not cfDNA",
+  "reads": 473185,
+  "total_samples": 1046600811,
+  "sample_rate_hz": 5000,
+  "read_ids_sha256": "db81fc9a6909427626073a567dd16ccb365c428555c54fe18b8620fda2dd399f"
+ },
+ "result": {
+  "exit_code": 0,
+  "time_limited": false,
+  "crashed": false,
+  "error_lines": [],
+  "wall_s": 42.929,
+  "dorado_finished_ms": 29548
+ },
+ "batching": {
+  "batchsize_used": 352,
+  "chunksize_used": 12288,
+  "batchsize_from_benchmark_table": true,
+  "log_lines": [
+   "[2026-11-07 03:10:08.409] [info] Running: \"basecaller\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0\" \"/workspace/dorado/subsets/short-155bp\" \"--device\" \"cuda:all\" \"--batchsize\" \"0\" \"-v\" \"--modified-bases-models\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2\"",
+   "[2026-11-07 03:10:10.857] [debug] Fastest capped+limited batch size is 384 @ 19696600",
+   "[2026-11-07 03:10:10.857] [debug] Fastest capped+limited batch size is 384 @ 19696600",
+   "[2026-11-07 03:10:15.320] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 352",
+   "[2026-11-07 03:10:15.320] [warning] cuda:0: Requested batch size 384 exceeds maximum safe estimated batch size 352.",
+   "[2026-11-07 03:10:15.320] [debug] cuda:0 using chunk size 12288, batch size 352",
+   "[2026-11-07 03:10:15.324] [debug] cuda:1 maximum safe estimated batch size at chunk size 12288 is 352",
+   "[2026-11-07 03:10:15.324] [warning] cuda:1: Requested batch size 384 exceeds maximum safe estimated batch size 352.",
+   "[2026-11-07 03:10:15.324] [debug] cuda:1 using chunk size 12288, batch size 352",
+   "[2026-11-07 03:10:15.867] [debug] BasecallerNode chunk size 12288"
+  ]
+ },
+ "throughput": {
+  "samples_per_s": 35260220.0,
+  "padding_samples_per_s": 41870000.0,
+  "useful_fraction": 0.84214,
+  "reads_per_s": 16014.08,
+  "peak_vram_mib": 30272,
+  "mean_gpu_util_pct": 69.5,
+  "mean_power_w": 428.0
+ },
+ "cost": {
+  "usd_hr": 2.38,
+  "usd_hr_source": "runpod NVIDIA GeForce RTX 5090 pod pblsqn1wq0prsv, rate at reservation 2026-11-07T02:54:10Z (harness ledger)",
+  "usd_run": 0.02838,
+  "usd_per_gbase": 0.5
+ },
+ "output": {
+  "bam": "calls.bam",
+  "reads_out": 473185,
+  "bases_out": 56758802,
+  "reads_with_mm": 473185,
+  "mean_qscore": 13.364,
+  "records_sha256": "101b892ea9858d3e3f0c1e589bd3220025d5b0c339cc7afb014020c6a26ea55f"
+ }
+}

@@ -1,0 +1,97 @@
+comparison,config,sample,min_cov,mod,cpg_sites,mean_abs_diff_pts,p99_abs_diff_pts,max_abs_diff_pts,sites_over_1pt,truth_pct_a,truth_pct_b,proxy
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,5mC_rep1,20,5mC,305,0.000,0.000,0.000,0,93.66,93.66,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,5mC_rep1,20,5hmC,305,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,5mC_rep1,500,5mC,250,0.000,0.000,0.000,0,93.66,93.66,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,5mC_rep1,500,5hmC,250,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,5hmC_rep1,20,5mC,520,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,5hmC_rep1,20,5hmC,520,0.000,0.000,0.000,0,87.62,87.62,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,5hmC_rep1,500,5mC,272,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,5hmC_rep1,500,5hmC,272,0.000,0.000,0.000,0,87.62,87.62,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,control_rep1,20,5mC,305,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,control_rep1,20,5hmC,305,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,control_rep1,500,5mC,273,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-sup52-mods-short-b256,control_rep1,500,5hmC,273,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,5mC_rep1,20,5mC,305,0.211,2.570,4.540,14,93.66,93.67,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,5mC_rep1,20,5hmC,305,0.222,2.290,3.730,20,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,5mC_rep1,500,5mC,248,0.071,0.360,0.510,0,93.66,93.67,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,5mC_rep1,500,5hmC,248,0.071,0.490,0.860,0,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,5hmC_rep1,20,5mC,515,0.140,2.040,4.350,14,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,5hmC_rep1,20,5hmC,515,0.255,3.770,7.410,27,87.62,87.60,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,5hmC_rep1,500,5mC,272,0.110,0.490,0.750,0,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,5hmC_rep1,500,5hmC,272,0.134,0.690,1.220,1,87.62,87.60,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,control_rep1,20,5mC,305,0.105,1.290,1.720,6,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,control_rep1,20,5hmC,305,0.169,1.860,2.090,12,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,control_rep1,500,5mC,273,0.050,0.300,0.660,0,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-sup52-mods-short-b256,control_rep1,500,5hmC,273,0.086,0.900,0.980,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,5mC_rep1,20,5mC,325,0.000,0.000,0.000,0,91.58,91.58,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,5mC_rep1,20,5hmC,325,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,5mC_rep1,500,5mC,250,0.000,0.000,0.000,0,91.79,91.79,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,5mC_rep1,500,5hmC,250,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,5hmC_rep1,20,5mC,561,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,5hmC_rep1,20,5hmC,561,0.000,0.000,0.000,0,85.99,85.99,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,5hmC_rep1,500,5mC,212,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,5hmC_rep1,500,5hmC,212,0.000,0.000,0.000,0,86.57,86.57,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,control_rep1,20,5mC,314,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,control_rep1,20,5hmC,314,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,control_rep1,500,5mC,273,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q3-hac52-mods-short,control_rep1,500,5hmC,273,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,5mC_rep1,20,5mC,321,0.277,4.060,5.470,25,91.58,91.58,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,5mC_rep1,20,5hmC,321,0.319,3.310,4.760,30,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,5mC_rep1,500,5mC,247,0.095,0.680,1.310,1,91.79,91.80,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,5mC_rep1,500,5hmC,247,0.118,1.280,2.010,3,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,5hmC_rep1,20,5mC,559,0.162,2.020,4.760,25,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,5hmC_rep1,20,5hmC,559,0.322,3.700,5.130,46,85.99,86.02,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,5hmC_rep1,500,5mC,212,0.149,0.810,1.380,2,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,5hmC_rep1,500,5hmC,212,0.211,0.990,1.700,2,86.57,86.64,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,control_rep1,20,5mC,310,0.113,1.560,4.000,9,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,control_rep1,20,5hmC,310,0.157,2.200,4.170,11,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,control_rep1,500,5mC,273,0.036,0.320,0.460,0,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q3-hac52-mods-short,control_rep1,500,5hmC,273,0.072,0.590,0.790,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,5mC_rep1,20,5mC,305,0.000,0.000,0.000,0,93.59,93.59,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,5mC_rep1,20,5hmC,305,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,5mC_rep1,500,5mC,270,0.000,0.000,0.000,0,93.59,93.59,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,5mC_rep1,500,5hmC,270,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,5hmC_rep1,20,5mC,549,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,5hmC_rep1,20,5hmC,549,0.000,0.000,0.000,0,90.07,90.07,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,5hmC_rep1,500,5mC,268,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,5hmC_rep1,500,5hmC,268,0.000,0.000,0.000,0,90.07,90.07,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,control_rep1,20,5mC,305,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,control_rep1,20,5hmC,305,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,control_rep1,500,5mC,273,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> RTX PRO 6000 Server,q4-hac60-mods-short-b256,control_rep1,500,5hmC,273,0.000,0.000,0.000,0,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,5mC_rep1,20,5mC,305,0.276,3.380,5.810,20,93.59,93.58,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,5mC_rep1,20,5hmC,305,0.308,3.050,4.410,26,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,5mC_rep1,500,5mC,268,0.106,0.680,1.070,1,93.59,93.58,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,5mC_rep1,500,5hmC,268,0.172,1.860,2.770,7,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,5hmC_rep1,20,5mC,547,0.209,2.440,4.170,36,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,5hmC_rep1,20,5hmC,547,0.453,4.000,6.380,99,90.07,89.90,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,5hmC_rep1,500,5mC,268,0.176,1.300,1.930,8,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,5hmC_rep1,500,5hmC,268,0.259,1.330,1.700,14,90.07,89.90,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,control_rep1,20,5mC,305,0.168,2.160,2.960,17,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,control_rep1,20,5hmC,305,0.179,1.700,4.070,12,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,control_rep1,500,5mC,273,0.054,0.390,0.480,0,,,True
+GPU swap: RTX 5090 -> H100 PCIe,q4-hac60-mods-short-b256,control_rep1,500,5hmC,273,0.102,0.900,1.380,1,,,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,5mC_rep1,20,5mC,321,0.103,1.340,2.430,4,91.58,91.55,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,5mC_rep1,20,5hmC,321,0.109,1.000,2.200,3,,,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,5mC_rep1,500,5mC,249,0.044,0.300,0.360,0,91.79,91.76,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,5mC_rep1,500,5hmC,249,0.049,0.410,0.600,0,,,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,5hmC_rep1,20,5mC,556,0.227,2.440,3.520,42,,,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,5hmC_rep1,20,5hmC,556,0.530,4.090,5.260,109,85.99,85.44,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,5hmC_rep1,500,5mC,202,0.219,2.030,3.520,11,,,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,5hmC_rep1,500,5hmC,202,0.228,1.420,3.450,9,86.57,86.09,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,control_rep1,20,5mC,314,0.061,0.880,1.730,3,,,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,control_rep1,20,5hmC,314,0.108,0.980,4.760,3,,,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,control_rep1,500,5mC,273,0.016,0.150,0.430,0,,,True
+same GPU (RTX 5090): chunk size 3000 vs default (HAC v5.2),q3-hac52-mods-short,control_rep1,500,5hmC,273,0.046,0.420,0.620,0,,,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,5mC_rep1,20,5mC,305,0.370,4.460,6.700,24,93.66,93.63,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,5mC_rep1,20,5hmC,305,0.317,2.910,5.140,28,,,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,5mC_rep1,500,5mC,250,0.128,0.510,0.580,0,93.66,93.63,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,5mC_rep1,500,5hmC,250,0.154,1.030,2.950,3,,,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,5hmC_rep1,20,5mC,517,0.270,3.450,5.010,36,,,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,5hmC_rep1,20,5hmC,517,0.349,3.700,5.640,50,87.62,87.81,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,5hmC_rep1,500,5mC,272,0.224,1.690,5.010,9,,,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,5hmC_rep1,500,5hmC,272,0.255,1.960,4.620,12,87.62,87.81,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,control_rep1,20,5mC,305,0.152,1.660,2.770,10,,,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,control_rep1,20,5hmC,305,0.350,5.230,7.810,24,,,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,control_rep1,500,5mC,273,0.073,0.540,0.760,0,,,True
+same GPU (RTX 5090): variable chunks off vs on (SUP v5.2),q4-sup52-mods-short-b256,control_rep1,500,5hmC,273,0.147,1.080,1.590,3,,,True

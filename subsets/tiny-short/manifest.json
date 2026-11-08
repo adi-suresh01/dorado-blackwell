@@ -1,0 +1,17 @@
+{
+ "subset_id": "tiny-short",
+ "source": "ONT open data modbase-validation_2024.10 subset/ (155 bp synthetic constructs, 5mC/5hmC ground truth), signal_positive reads of 1000-6000 samples; proxy, not cfDNA; first 2000 reads",
+ "proxy": true,
+ "reads": 2000,
+ "total_samples": 4423553,
+ "sample_rate_hz": 5000,
+ "sample_rates_seen": null,
+ "read_ids_sha256": "2b060f1454b6e207866c9f49877ca488ff5f5cd34bb6d3101a9dcdd966ad877e",
+ "samples_per_read": {
+  "min": 1039,
+  "p10": 1606,
+  "median": 2038,
+  "p90": 3035,
+  "max": 5997
+ }
+}

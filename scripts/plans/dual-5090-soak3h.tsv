@@ -1,0 +1,6 @@
+# Q1 follow-up on 2x RTX 5090 with --device cuda:all. The first soaks (plans/dual-5090.tsv) ended when six POD5
+# files ran out, at 65 min (2.1.2) and 72 min (1.4.0), short of dorado#1507's shortest crash (89 min). This one is a
+# single Dorado 2.1.2 process time-boxed at 3 h over the same six files listed 4 times (pod_setup.sh --soak-files 6
+# --soak-copies 4: about 5.9e11 samples, 4.3 h at the 3.78e7 samples/s measured), so it ends at the box, exit 124.
+# Same columns as single-gpu.tsv.
+Q1	q1-soak3h-sup52-mods-212	1	SUP52	SUP52_5MC5HMC	soak	0	-	10800	2.1.2	-

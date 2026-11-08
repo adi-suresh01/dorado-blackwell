@@ -1,0 +1,30 @@
+{
+ "a": "5090 sup52+mods variable chunks",
+ "b": "5090 sup52+mods fixed chunk",
+ "reads_a": 473185,
+ "reads_b": 473184,
+ "reads_common": 473184,
+ "reads_only_a": 1,
+ "reads_only_b": 0,
+ "pct_identical_sequence": 19.66233008723879,
+ "pct_identical_mm_ml_of_common": 4.079596943260973,
+ "pct_identical_mm_ml_given_same_sequence": 20.74828835219639,
+ "differing_reads_base_identity_median": 0.9646017699115044,
+ "differing_reads_base_identity_min": 0.17361111111111116,
+ "c_sites_compared": 2847663,
+ "pct_c_site_call_flips": 0.3651064047957922,
+ "cpg_sites_compared": 669680,
+ "pct_cpg_site_call_flips": 0.28685342253016366,
+ "max_abs_mod_prob_diff": 0.998046875,
+ "aggregate_a": {
+  "cpg_sites": 3554751,
+  "cpg_5mC_rate": 0.10269805114338529,
+  "cpg_5hmC_rate": 0.08800728939945442
+ },
+ "aggregate_b": {
+  "cpg_sites": 3639428,
+  "cpg_5mC_rate": 0.09982942374461042,
+  "cpg_5hmC_rate": 0.08746594245029714
+ },
+ "edit_distance": "edlib"
+}

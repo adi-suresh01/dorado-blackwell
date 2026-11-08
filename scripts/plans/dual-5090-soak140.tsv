@@ -1,0 +1,4 @@
+# Q1 follow-up, started by hand only if q1-soak-sup52-mods-212 ran its full 90 min without a crash: the same soak on
+# 1.4.0, the release dorado#1507's reporter crashed on after about 1.5 h with 5mC_5hmC@v2. A crash here and none on
+# 2.1.2 would place a fix between the two; no crash on either leaves the report unreproduced in this time box.
+Q1	q1-soak-sup52-mods-140	1	SUP52	SUP52_5MC5HMC	soak	0	-	5400	1.4.0	-

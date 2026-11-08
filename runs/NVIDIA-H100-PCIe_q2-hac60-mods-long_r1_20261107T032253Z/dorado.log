@@ -1,0 +1,24 @@
+[2026-11-07 03:22:54.392] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0" "/workspace/dorado/subsets/long-hg002" "--device" "cuda:0" "--batchsize" "0" "-v" "--modified-bases-models" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1"
+[2026-11-07 03:22:55.038] [info] Using CUDA devices:
+[2026-11-07 03:22:55.038] [info] cuda:0 - NVIDIA H100 PCIe
+[2026-11-07 03:22:56.140] [debug] cuda:0 memory available: 83.25GB
+[2026-11-07 03:22:56.141] [debug] Fastest capped+limited batch size is 2688 @ 86523800
+[2026-11-07 03:22:56.895] [debug] cuda:0 memory available: 83.23GB
+[2026-11-07 03:22:56.899] [debug] cuda:0 memory limit 80.14GB
+[2026-11-07 03:22:56.899] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 7424
+[2026-11-07 03:22:56.899] [debug] cuda:0 maximum safe estimated batch size at chunk size 6144 is 14848
+[2026-11-07 03:22:56.899] [debug] cuda:0 using chunk size 12288, batch size 2688
+[2026-11-07 03:22:56.899] [debug] cuda:0 Model memory 22.55GB
+[2026-11-07 03:22:56.902] [debug] cuda:0 Decode memory 6.40GB
+[2026-11-07 03:22:57.353] [debug] cuda:0 using chunk size 6144, batch size 2688
+[2026-11-07 03:22:57.353] [debug] cuda:0 Model memory 11.27GB
+[2026-11-07 03:22:57.353] [debug] cuda:0 Decode memory 3.20GB
+[2026-11-07 03:22:57.856] [info] > Creating basecall pipeline
+[2026-11-07 03:22:57.861] [debug] BasecallerNode chunk size 12288
+[2026-11-07 03:22:57.861] [debug] BasecallerNode chunk size 6144
+[2026-11-07 03:22:57.931] [debug] Load reads from file /workspace/dorado/subsets/long-hg002/long-hg002.pod5
+[2026-11-07 03:23:14.952] [info] > Finished in (ms): 17022
+[2026-11-07 03:23:14.952] [info] > Simplex reads basecalled: 3574
+[2026-11-07 03:23:14.952] [info] > Basecalled @ Samples/s: 6.149213e+07
+[2026-11-07 03:23:14.952] [debug] > Including Padding @ Samples/s: 6.792e+07 (90.54%)
+[2026-11-07 03:23:14.954] [info] > Finished

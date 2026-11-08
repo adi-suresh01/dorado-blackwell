@@ -1,0 +1,60 @@
+gpu,config,subset,proxy,model,mods,batch_used,repeats,crashed,samples_per_s_median,repeat_spread_pct,useful_fraction,reads_per_s_median,usd_hr,usd_per_gbase_median,usd_per_gbase_steady,dorado
+2x RTX 5090,q1-dual-sup52-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,352,2,0,3.503e+07,1.3,0.842,15907.9,2.38,0.4693,0.3465,2.1.2+8b8fc5d
+2x RTX 5090,q1-dual-sup52-mods-short-b256,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,256,2,0,3.467e+07,0.0,0.843,15748.1,2.38,0.3803,0.3500,2.1.2+8b8fc5d
+2x RTX 5090,q1-soak-sup52-mods-140,soak,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,224,1,0,3.409e+07,,0.932,140.1,2.38,,,1.4.0+ba44a013
+2x RTX 5090,q1-soak-sup52-mods-212,soak,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,352,1,0,3.778e+07,,0.949,155.2,2.38,,,2.1.2+8b8fc5d
+H100 PCIe,q2-hac52-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,,2432,2,0,1.001e+08,0.1,0.916,341.7,2.89,0.1670,0.1028,2.1.2+8b8fc5d
+RTX 5090,q2-hac52-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,,3456,2,0,1.515e+08,2.9,0.891,517.3,1.19,0.0349,0.0280,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q2-hac52-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,,7936,2,0,1.526e+08,1.5,0.825,520.9,2.49,0.0784,0.0581,2.1.2+8b8fc5d
+H100 PCIe,q2-hac52-mods-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2,2432,2,0,6.873e+07,0.6,0.916,234.7,2.89,0.1983,0.1497,2.1.2+8b8fc5d
+RTX 5090,q2-hac52-mods-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2,3456,2,0,9.716e+07,1.0,0.891,331.8,1.19,0.0514,0.0436,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q2-hac52-mods-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2,7936,2,0,9.757e+07,0.0,0.825,333.1,2.49,0.1134,0.0909,2.1.2+8b8fc5d
+H100 PCIe,q2-hac60-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,,2688,2,0,8.077e+07,0.0,0.905,275.8,2.89,0.1678,0.1273,2.1.2+8b8fc5d
+RTX 5090,q2-hac60-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,,2688,2,0,1.078e+08,0.0,0.906,368.0,1.19,0.0474,0.0393,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q2-hac60-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,,4864,2,0,1.214e+08,0.0,0.876,414.5,2.49,0.0895,0.0730,2.1.2+8b8fc5d
+H100 PCIe,q2-hac60-mods-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,2688,2,0,6.155e+07,0.2,0.905,210.2,2.89,0.2157,0.1671,2.1.2+8b8fc5d
+RTX 5090,q2-hac60-mods-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,2624,2,0,3.382e+07,0.0,0.902,115.5,1.19,0.1351,0.1252,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q2-hac60-mods-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,4864,2,0,8.223e+07,0.0,0.876,280.8,2.49,0.1262,0.1077,2.1.2+8b8fc5d
+H100 PCIe,q2-sup52-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,,992,2,0,1.936e+07,0.6,0.934,66.1,2.89,0.5958,0.5306,2.1.2+8b8fc5d
+RTX 5090,q2-sup52-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,,384,2,0,1.973e+07,0.8,0.944,67.3,1.19,0.2359,0.2145,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q2-sup52-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,,928,2,0,2.372e+07,0.3,0.937,81.0,2.49,0.3934,0.3733,2.1.2+8b8fc5d
+H100 PCIe,q2-sup52-mods-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,992,2,0,1.727e+07,0.0,0.933,59.0,2.89,0.6649,0.5950,2.1.2+8b8fc5d
+RTX 5090,q2-sup52-mods-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,352,2,0,1.774e+07,0.3,0.945,60.6,1.19,0.2564,0.2385,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q2-sup52-mods-long,long-hg002,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,928,2,0,2.12e+07,0.2,0.937,72.4,2.49,0.4363,0.4175,2.1.2+8b8fc5d
+RTX 5090,q2x-hac60-mods-long-b1024,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,1024,2,0,4.065e+07,0.0,0.924,138.8,2.38,0.2525,0.2083,2.1.2+8b8fc5d
+RTX 5090,q2x-hac60-mods-long-b1536,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,1536,2,0,5.529e+07,0.0,0.924,188.8,2.38,0.1686,0.1532,2.1.2+8b8fc5d
+RTX 5090,q2x-hac60-mods-long-b2048,long-hg002,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,2048,2,0,6.676e+07,0.7,0.904,227.9,2.38,0.1426,0.1269,2.1.2+8b8fc5d
+H100 PCIe,q3-hac52-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2,2432,2,0,2.436e+07,4.3,0.952,11061.9,2.89,0.6673,0.5948,2.1.2+8b8fc5d
+RTX 5090,q3-hac52-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2,3456,2,0,6.864e+07,0.7,0.928,31176.0,1.19,0.0978,0.0869,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q3-hac52-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2,7936,2,0,5.787e+07,0.5,0.847,26281.6,2.49,0.2475,0.2156,2.1.2+8b8fc5d
+H100 PCIe,q3-hac52-mods-short-c3000,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2,2432,2,0,2.618e+07,1.7,0.954,11890.2,2.89,0.6232,0.5525,2.1.2+8b8fc5d
+RTX 5090,q3-hac52-mods-short-c3000,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2,3456,3,0,7.22e+07,49.4,0.948,32789.4,1.19,0.0910,0.0825,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q3-hac52-mods-short-c3000,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2,7936,2,0,5.94e+07,2.3,0.931,26978.8,2.49,0.2283,0.2098,2.1.2+8b8fc5d
+H100 PCIe,q3-hac52-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,,2432,2,0,6.471e+07,4.5,0.952,29391.4,2.89,0.2807,0.2239,2.1.2+8b8fc5d
+RTX 5090,q3-hac52-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,,3456,3,0,1.551e+08,76.7,0.928,70456.2,1.19,0.0829,0.0384,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q3-hac52-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v5.2.0,,7936,2,0,1.507e+08,2.8,0.847,68452.0,2.49,0.1109,0.0828,2.1.2+8b8fc5d
+H100 PCIe,q3-hac60-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,2688,2,0,2.509e+07,0.7,0.970,11396.0,2.89,0.6357,0.5720,2.1.2+8b8fc5d
+RTX 5090,q3-hac60-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,2624,2,0,6.753e+07,0.0,0.971,30669.5,1.19,0.1025,0.0874,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q3-hac60-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,4864,2,0,5.358e+07,1.1,0.942,24333.3,2.49,0.2560,0.2306,2.1.2+8b8fc5d
+H100 PCIe,q3-hac60-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,,2688,2,0,7.213e+07,2.5,0.970,32758.0,2.89,0.2497,0.1990,2.1.2+8b8fc5d
+RTX 5090,q3-hac60-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,,2688,3,0,1.13e+08,65.4,0.970,51343.8,1.19,0.0639,0.0522,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q3-hac60-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,,4864,2,0,1.258e+08,1.0,0.942,57114.8,2.49,0.1215,0.0982,2.1.2+8b8fc5d
+H100 PCIe,q3-sup52-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,992,2,0,1.471e+07,0.1,0.838,6680.5,2.89,1.1018,1.0018,2.1.2+8b8fc5d
+RTX 5090,q3-sup52-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,352,2,0,1.648e+07,0.0,0.848,7486.4,1.19,0.4063,0.3681,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q3-sup52-mods-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,928,2,0,1.922e+07,0.0,0.838,8728.4,2.49,0.6872,0.6606,2.1.2+8b8fc5d
+H100 PCIe,q3-sup52-mods-short-fixedchunk,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,992,2,0,6.543e+06,0.0,0.358,2971.8,2.89,2.3823,2.2413,2.1.2+8b8fc5d
+RTX 5090,q3-sup52-mods-short-fixedchunk,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,352,2,0,6.544e+06,0.1,0.358,2972.2,1.19,0.9642,0.9228,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q3-sup52-mods-short-fixedchunk,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,928,2,0,7.967e+06,0.1,0.358,3618.3,2.49,1.6183,1.5861,2.1.2+8b8fc5d
+H100 PCIe,q3-sup52-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,,992,2,0,1.799e+07,1.3,0.838,8170.7,2.89,0.9302,0.8191,2.1.2+8b8fc5d
+RTX 5090,q3-sup52-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,,384,2,0,1.813e+07,0.3,0.846,8234.0,1.19,0.3543,0.3347,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q3-sup52-short,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,,928,2,0,2.149e+07,0.4,0.838,9758.0,2.49,0.6153,0.5909,2.1.2+8b8fc5d
+RTX 5090,q3x-hac60-mods-short-b1024,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,1024,1,0,4.001e+07,,0.980,18169.3,2.38,0.3156,0.2951,2.1.2+8b8fc5d
+H100 PCIe,q4-hac60-mods-short-b256,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,256,2,0,1.037e+07,0.0,0.987,4711.9,2.89,1.4396,1.3835,2.1.2+8b8fc5d
+RTX 5090,q4-hac60-mods-short-b256,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,256,2,0,1.207e+07,0.1,0.987,5483.6,1.19,0.5106,0.4890,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q4-hac60-mods-short-b256,short-155bp,True,dna_r10.4.1_e8.2_400bps_hac@v6.0.0,dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1,256,2,0,1.027e+07,0.7,0.987,4665.2,2.49,1.2208,1.2026,2.1.2+8b8fc5d
+H100 PCIe,q4-sup52-mods-short-b256,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,256,2,0,1.541e+07,0.6,0.847,6997.5,2.89,1.0699,0.9564,2.1.2+8b8fc5d
+RTX 5090,q4-sup52-mods-short-b256,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,256,2,0,1.627e+07,0.2,0.847,7387.7,1.19,0.4083,0.3730,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q4-sup52-mods-short-b256,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,256,2,0,1.837e+07,0.0,0.847,8341.1,2.49,0.7127,0.6913,2.1.2+8b8fc5d
+H100 PCIe,q4-sup52-mods-short-b512,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,512,1,0,1.584e+07,,0.845,7193.2,2.89,1.0215,0.9304,2.1.2+8b8fc5d
+RTX 5090,q4-sup52-mods-short-b512,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,352,1,0,1.651e+07,,0.848,7499.7,1.19,0.4070,0.3675,2.1.2+8b8fc5d
+RTX PRO 6000 Server,q4-sup52-mods-short-b512,short-155bp,True,dna_r10.4.1_e8.2_400bps_sup@v5.2.0,dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2,512,1,0,1.907e+07,,0.845,8662.1,2.49,0.6892,0.6657,2.1.2+8b8fc5d

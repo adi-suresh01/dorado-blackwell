@@ -1,0 +1,25 @@
+[2026-11-07 02:56:11.083] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0" "/workspace/dorado/subsets/long-hg002" "--device" "cuda:0" "--batchsize" "0" "-v" "--modified-bases-models" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1"
+[2026-11-07 02:56:11.304] [info] Using CUDA devices:
+[2026-11-07 02:56:11.304] [info] cuda:0 - NVIDIA GeForce RTX 5090
+[2026-11-07 02:56:11.617] [debug] cuda:0 memory available: 31.82GB
+[2026-11-07 02:56:11.617] [debug] Fastest capped+limited batch size is 2688 @ 93011500
+[2026-11-07 02:56:11.833] [debug] cuda:0 memory available: 31.80GB
+[2026-11-07 02:56:11.834] [debug] cuda:0 memory limit 28.73GB
+[2026-11-07 02:56:11.834] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 2624
+[2026-11-07 02:56:11.834] [warning] cuda:0: Requested batch size 2688 exceeds maximum safe estimated batch size 2624.
+[2026-11-07 02:56:11.834] [debug] cuda:0 maximum safe estimated batch size at chunk size 6144 is 5312
+[2026-11-07 02:56:11.834] [debug] cuda:0 using chunk size 12288, batch size 2624
+[2026-11-07 02:56:11.834] [debug] cuda:0 Model memory 22.01GB
+[2026-11-07 02:56:11.835] [debug] cuda:0 Decode memory 6.24GB
+[2026-11-07 02:56:12.618] [debug] cuda:0 using chunk size 6144, batch size 2688
+[2026-11-07 02:56:12.618] [debug] cuda:0 Model memory 11.27GB
+[2026-11-07 02:56:12.618] [debug] cuda:0 Decode memory 3.20GB
+[2026-11-07 02:56:12.913] [info] > Creating basecall pipeline
+[2026-11-07 02:56:12.917] [debug] BasecallerNode chunk size 12288
+[2026-11-07 02:56:12.917] [debug] BasecallerNode chunk size 6144
+[2026-11-07 02:56:12.927] [debug] Load reads from file /workspace/dorado/subsets/long-hg002/long-hg002.pod5
+[2026-11-07 02:56:43.879] [info] > Finished in (ms): 30952
+[2026-11-07 02:56:43.880] [info] > Simplex reads basecalled: 3574
+[2026-11-07 02:56:43.880] [info] > Basecalled @ Samples/s: 3.381749e+07
+[2026-11-07 02:56:43.880] [debug] > Including Padding @ Samples/s: 3.750e+07 (90.17%)
+[2026-11-07 02:56:43.880] [info] > Finished

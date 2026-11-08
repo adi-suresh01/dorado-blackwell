@@ -1,0 +1,25 @@
+[2026-11-07 03:07:21.514] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v5.2.0" "/workspace/dorado/subsets/short-155bp" "--device" "cuda:0" "--batchsize" "0" "-v"
+[2026-11-07 03:07:21.762] [info] Using CUDA devices:
+[2026-11-07 03:07:21.762] [info] cuda:0 - NVIDIA RTX PRO 6000 Blackwell Server Edition
+[2026-11-07 03:07:21.767] [debug] cuda:0 memory available: 101.39GB
+[2026-11-07 03:07:21.767] [debug] Fastest capped+limited batch size is 7936 @ 163218000
+[2026-11-07 03:07:21.878] [debug] cuda:0 memory available: 101.16GB
+[2026-11-07 03:07:21.878] [debug] cuda:0 memory limit 100.16GB
+[2026-11-07 03:07:21.878] [debug] cuda:0 maximum safe estimated batch size at chunk size 9996 is 15104
+[2026-11-07 03:07:21.878] [debug] cuda:0 maximum safe estimated batch size at chunk size 4998 is 30208
+[2026-11-07 03:07:21.879] [debug] cuda:0 using chunk size 9996, batch size 7936
+[2026-11-07 03:07:21.879] [debug] cuda:0 Model memory 37.23GB
+[2026-11-07 03:07:21.879] [debug] cuda:0 Decode memory 15.36GB
+[2026-11-07 03:07:22.402] [debug] cuda:0 using chunk size 4998, batch size 7936
+[2026-11-07 03:07:22.402] [debug] cuda:0 Model memory 18.62GB
+[2026-11-07 03:07:22.402] [debug] cuda:0 Decode memory 7.68GB
+[2026-11-07 03:07:23.064] [info] > Creating basecall pipeline
+[2026-11-07 03:07:23.066] [debug] BasecallerNode chunk size 9996
+[2026-11-07 03:07:23.066] [debug] BasecallerNode chunk size 4998
+[2026-11-07 03:07:23.082] [debug] Load reads from file /workspace/dorado/subsets/short-155bp/short-155bp.pod5
+[2026-11-07 03:07:29.899] [info] > Finished in (ms): 6817
+[2026-11-07 03:07:29.899] [info] > Simplex reads basecalled: 473184
+[2026-11-07 03:07:29.899] [info] > Simplex reads filtered: 1
+[2026-11-07 03:07:29.900] [info] > Basecalled @ Samples/s: 1.528339e+08
+[2026-11-07 03:07:29.900] [debug] > Including Padding @ Samples/s: 1.804e+08 (84.73%)
+[2026-11-07 03:07:29.900] [info] > Finished

@@ -1,0 +1,25 @@
+[2026-11-07 03:41:39.700] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v5.2.0" "/workspace/dorado/subsets/short-155bp" "--device" "cuda:0" "--batchsize" "0" "-v" "--modified-bases-models" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2" "--chunksize" "3000"
+[2026-11-07 03:41:40.478] [info] Using CUDA devices:
+[2026-11-07 03:41:40.478] [info] cuda:0 - NVIDIA H100 PCIe
+[2026-11-07 03:41:42.873] [debug] cuda:0 memory available: 83.25GB
+[2026-11-07 03:41:42.875] [debug] Fastest capped+limited batch size is 2432 @ 103774000
+[2026-11-07 03:41:44.062] [debug] cuda:0 memory available: 83.22GB
+[2026-11-07 03:41:44.062] [debug] cuda:0 memory limit 80.13GB
+[2026-11-07 03:41:44.063] [debug] cuda:0 maximum safe estimated batch size at chunk size 3000 is 40256
+[2026-11-07 03:41:44.063] [debug] cuda:0 maximum safe estimated batch size at chunk size 1500 is 80512
+[2026-11-07 03:41:44.064] [debug] cuda:0 using chunk size 3000, batch size 2432
+[2026-11-07 03:41:44.064] [debug] cuda:0 Model memory 3.42GB
+[2026-11-07 03:41:44.065] [debug] cuda:0 Decode memory 1.41GB
+[2026-11-07 03:41:44.159] [debug] cuda:0 using chunk size 1500, batch size 2432
+[2026-11-07 03:41:44.160] [debug] cuda:0 Model memory 1.71GB
+[2026-11-07 03:41:44.160] [debug] cuda:0 Decode memory 0.71GB
+[2026-11-07 03:41:44.337] [info] > Creating basecall pipeline
+[2026-11-07 03:41:44.339] [debug] BasecallerNode chunk size 3000
+[2026-11-07 03:41:44.340] [debug] BasecallerNode chunk size 1500
+[2026-11-07 03:41:44.414] [debug] Load reads from file /workspace/dorado/subsets/short-155bp/short-155bp.pod5
+[2026-11-07 03:42:24.549] [info] > Finished in (ms): 40136
+[2026-11-07 03:42:24.550] [info] > Simplex reads basecalled: 473184
+[2026-11-07 03:42:24.550] [info] > Simplex reads filtered: 1
+[2026-11-07 03:42:24.551] [info] > Basecalled @ Samples/s: 2.595847e+07
+[2026-11-07 03:42:24.551] [debug] > Including Padding @ Samples/s: 2.718e+07 (95.52%)
+[2026-11-07 03:42:24.553] [info] > Finished

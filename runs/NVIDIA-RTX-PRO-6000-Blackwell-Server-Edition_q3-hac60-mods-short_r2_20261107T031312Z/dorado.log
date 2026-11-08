@@ -1,0 +1,25 @@
+[2026-11-07 03:13:12.939] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0" "/workspace/dorado/subsets/short-155bp" "--device" "cuda:0" "--batchsize" "0" "-v" "--modified-bases-models" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v6.0.0_5mC_5hmC@v1"
+[2026-11-07 03:13:13.204] [info] Using CUDA devices:
+[2026-11-07 03:13:13.205] [info] cuda:0 - NVIDIA RTX PRO 6000 Blackwell Server Edition
+[2026-11-07 03:13:13.449] [debug] cuda:0 memory available: 100.06GB
+[2026-11-07 03:13:13.450] [debug] Fastest capped+limited batch size is 4864 @ 107717000
+[2026-11-07 03:13:13.509] [debug] cuda:0 memory available: 100.04GB
+[2026-11-07 03:13:13.509] [debug] cuda:0 memory limit 96.90GB
+[2026-11-07 03:13:13.509] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 8960
+[2026-11-07 03:13:13.509] [debug] cuda:0 maximum safe estimated batch size at chunk size 6144 is 17984
+[2026-11-07 03:13:13.509] [debug] cuda:0 using chunk size 12288, batch size 4864
+[2026-11-07 03:13:13.509] [debug] cuda:0 Model memory 40.80GB
+[2026-11-07 03:13:13.509] [debug] cuda:0 Decode memory 11.58GB
+[2026-11-07 03:13:13.959] [debug] cuda:0 using chunk size 6144, batch size 4864
+[2026-11-07 03:13:13.959] [debug] cuda:0 Model memory 20.40GB
+[2026-11-07 03:13:13.959] [debug] cuda:0 Decode memory 5.79GB
+[2026-11-07 03:13:14.433] [info] > Creating basecall pipeline
+[2026-11-07 03:13:14.433] [debug] BasecallerNode chunk size 12288
+[2026-11-07 03:13:14.434] [debug] BasecallerNode chunk size 6144
+[2026-11-07 03:13:14.450] [debug] Load reads from file /workspace/dorado/subsets/short-155bp/short-155bp.pod5
+[2026-11-07 03:13:33.790] [info] > Finished in (ms): 19340
+[2026-11-07 03:13:33.790] [info] > Simplex reads basecalled: 473184
+[2026-11-07 03:13:33.790] [info] > Simplex reads filtered: 1
+[2026-11-07 03:13:33.790] [info] > Basecalled @ Samples/s: 5.387120e+07
+[2026-11-07 03:13:33.790] [debug] > Including Padding @ Samples/s: 5.717e+07 (94.23%)
+[2026-11-07 03:13:33.791] [info] > Finished

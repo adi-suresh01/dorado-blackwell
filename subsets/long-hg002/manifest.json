@@ -1,0 +1,17 @@
+{
+ "subset_id": "long-hg002",
+ "source": "ONT open data giab_2025.01 HG002 PAW70337 (genomic DNA), signal_positive reads of >= 50000 samples in read-id order, total matched to the short subset; proxy, not cfDNA",
+ "proxy": true,
+ "reads": 3574,
+ "total_samples": 1046754761,
+ "sample_rate_hz": 5000,
+ "sample_rates_seen": null,
+ "read_ids_sha256": "705ba3ae8ec7246ff2a7d08bff604daca9c62d23195832f9059d77ac6f8b9d72",
+ "samples_per_read": {
+  "min": 50019,
+  "p10": 76698,
+  "median": 278812,
+  "p90": 523557,
+  "max": 1341690
+ }
+}

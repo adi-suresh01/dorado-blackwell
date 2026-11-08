@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dorado-blackwell/verdict.schema.json",
+  "title": "One Dorado run",
+  "description": "Written by make_verdict.py for every run, passing or not. Every number is measured on this run unless its field name says otherwise; null means not measured.",
+  "type": "object",
+  "required": ["schema_version", "run_id", "question", "config_id", "repeat", "started_utc", "host", "dorado", "args", "data", "result", "batching", "throughput", "cost", "output"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "description": "<gpu_tag>_<config_id>_r<repeat>_<utc stamp>"},
+    "question": {"enum": ["Q1", "Q2", "Q3", "Q4", "smoke"]},
+    "config_id": {"type": "string", "description": "Names model + mods + subset + knobs, shared by the repeats of one config"},
+    "repeat": {"type": "integer", "minimum": 1},
+    "started_utc": {"type": "string"},
+    "host": {
+      "type": "object",
+      "required": ["provider", "gpu_name", "gpu_count", "driver_version", "cuda_driver_version", "compute_cap", "vram_mib", "gpu_uuids", "cpu_model", "cpu_threads", "host_ram_gib", "kernel"],
+      "additionalProperties": false,
+      "properties": {
+        "provider": {"type": ["string", "null"], "description": "runpod, vast or local"},
+        "pod_id": {"type": ["string", "null"]},
+        "image": {"type": ["string", "null"], "description": "Container image with digest; null on the Mac"},
+        "gpu_name": {"type": ["string", "null"]},
+        "gpu_count": {"type": ["integer", "null"], "description": "GPUs Dorado was allowed to use"},
+        "driver_version": {"type": ["string", "null"]},
+        "cuda_driver_version": {"type": ["string", "null"], "description": "CUDA version the driver supports (nvidia-smi header)"},
+        "compute_cap": {"type": ["string", "null"]},
+        "vram_mib": {"type": ["integer", "null"]},
+        "power_limit_w": {"type": ["number", "null"]},
+        "gpu_uuids": {"type": "array", "items": {"type": "string"}},
+        "cpu_model": {"type": ["string", "null"]},
+        "cpu_threads": {"type": ["integer", "null"]},
+        "host_ram_gib": {"type": ["number", "null"]},
+        "kernel": {"type": ["string", "null"]}
+      }
+    },
+    "dorado": {
+      "type": "object",
+      "required": ["version", "build_sha256", "simplex_model", "mods_models"],
+      "additionalProperties": false,
+      "properties": {
+        "version": {"type": "string", "description": "dorado --version"},
+        "build_sha256": {"type": ["string", "null"], "description": "sha256 of the release archive the binary came from"},
+        "simplex_model": {"type": "string"},
+        "mods_models": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "args": {
+      "type": "object",
+      "required": ["command", "device", "batchsize_requested", "chunksize_requested", "overlap_requested", "mods_batchsize_requested"],
+      "additionalProperties": false,
+      "properties": {
+        "command": {"type": "array", "items": {"type": "string"}},
+        "device": {"type": "string"},
+        "batchsize_requested": {"type": "integer", "description": "0 = Dorado picks"},
+        "chunksize_requested": {"type": ["integer", "null"], "description": "null = model default"},
+        "overlap_requested": {"type": ["integer", "null"]},
+        "mods_batchsize_requested": {"type": ["integer", "null"]},
+        "env": {"type": "object", "additionalProperties": {"type": "string"}, "description": "CUDA_* and DORADO_* variables set for the run"}
+      }
+    },
+    "data": {
+      "type": "object",
+      "required": ["subset_id", "proxy", "source", "reads", "total_samples", "sample_rate_hz"],
+      "additionalProperties": false,
+      "properties": {
+        "subset_id": {"type": "string"},
+        "proxy": {"type": "boolean", "description": "true when the reads are not cfDNA (for example short reads cut from a genomic library)"},
+        "source": {"type": "string", "description": "Dataset accession or S3 path the subset was cut from"},
+        "reads": {"type": ["integer", "null"]},
+        "total_samples": {"type": ["integer", "null"]},
+        "sample_rate_hz": {"type": ["integer", "null"]},
+        "read_ids_sha256": {"type": ["string", "null"], "description": "sha256 of the sorted read-id list that defines the subset"}
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["exit_code", "time_limited", "crashed", "error_lines", "wall_s"],
+      "additionalProperties": false,
+      "properties": {
+        "exit_code": {"type": "integer", "description": "128+N for signal N; 124 when the run's time limit stopped it"},
+        "time_limited": {"type": "boolean", "description": "Stopped at its --time-limit (soak runs); not a crash by itself"},
+        "crashed": {"type": "boolean", "description": "Non-zero exit (128+N for signal N) or a fatal line in the log (CUDA error, terminate, segfault); per-read [error] lines alone do not count"},
+        "error_lines": {"type": "array", "items": {"type": "string"}, "description": "First error lines verbatim from dorado.log"},
+        "wall_s": {"type": "number", "description": "Process start to exit, model load included"},
+        "dorado_finished_ms": {"type": ["integer", "null"], "description": "Dorado's own 'Finished in (ms)'"}
+      }
+    },
+    "batching": {
+      "type": "object",
+      "required": ["batchsize_used", "chunksize_used", "log_lines"],
+      "additionalProperties": false,
+      "properties": {
+        "batchsize_used": {"type": ["integer", "null"], "description": "From Dorado's log; the first device's when they differ"},
+        "chunksize_used": {"type": ["integer", "null"]},
+        "batchsize_from_benchmark_table": {"type": ["boolean", "null"], "description": "false when Dorado logged that it had no timings for this GPU and searched"},
+        "log_lines": {"type": "array", "items": {"type": "string"}, "description": "Every batch/chunk size line, verbatim"}
+      }
+    },
+    "throughput": {
+      "type": "object",
+      "required": ["samples_per_s", "reads_per_s", "padding_samples_per_s", "useful_fraction"],
+      "additionalProperties": false,
+      "properties": {
+        "samples_per_s": {"type": ["number", "null"], "description": "Dorado's 'Basecalled @ Samples/s'"},
+        "padding_samples_per_s": {"type": ["number", "null"], "description": "Dorado's 'Including Padding @ Samples/s' (debug log)"},
+        "useful_fraction": {"type": ["number", "null"], "description": "samples_per_s / padding_samples_per_s: share of computed samples that were real signal"},
+        "reads_per_s": {"type": ["number", "null"], "description": "Reads basecalled / dorado_finished_ms"},
+        "peak_vram_mib": {"type": ["integer", "null"], "description": "Max over GPUs and 1 s samples"},
+        "mean_gpu_util_pct": {"type": ["number", "null"]},
+        "mean_power_w": {"type": ["number", "null"]}
+      }
+    },
+    "cost": {
+      "type": "object",
+      "required": ["usd_hr", "usd_hr_source", "usd_run", "usd_per_gbase"],
+      "additionalProperties": false,
+      "properties": {
+        "usd_hr": {"type": ["number", "null"], "description": "Whole pod, from the harness ledger at create"},
+        "usd_hr_source": {"type": ["string", "null"], "description": "Provider, offer and timestamp the price came from"},
+        "usd_run": {"type": ["number", "null"], "description": "usd_hr x wall_s"},
+        "usd_per_gbase": {"type": ["number", "null"], "description": "usd_run / output gigabases"}
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["bam", "reads_out", "bases_out"],
+      "additionalProperties": false,
+      "properties": {
+        "bam": {"type": ["string", "null"], "description": "Path relative to the run directory"},
+        "reads_out": {"type": ["integer", "null"]},
+        "bases_out": {"type": ["integer", "null"]},
+        "reads_with_mm": {"type": ["integer", "null"], "description": "Records carrying an MM tag"},
+        "mean_qscore": {"type": ["number", "null"]},
+        "records_sha256": {"type": ["string", "null"], "description": "sha256 over (read id, sequence, MM, ML) of every record sorted by read id; equal across runs means identical calls"}
+      }
+    },
+    "notes": {"type": "string"}
+  }
+}

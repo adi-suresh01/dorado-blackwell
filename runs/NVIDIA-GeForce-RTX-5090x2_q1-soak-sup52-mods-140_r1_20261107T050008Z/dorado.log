@@ -1,0 +1,101 @@
+[2026-11-07 05:00:11.071] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0" "/workspace/dorado/soak" "--device" "cuda:all" "--batchsize" "0" "-v" "--modified-bases-models" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2"
+[2026-11-07 05:00:11.744] [info] > Creating basecall pipeline
+[2026-11-07 05:00:17.445] [info] Using CUDA devices:
+[2026-11-07 05:00:17.445] [info] cuda:0 - NVIDIA GeForce RTX 5090
+[2026-11-07 05:00:17.445] [info] cuda:1 - NVIDIA GeForce RTX 5090
+[2026-11-07 05:00:19.162] [debug] TxEncoderStack: use_koi_tiled true.
+[2026-11-07 05:00:19.162] [debug] TxEncoderStack: use_koi_volta_tiled false.
+[2026-11-07 05:00:19.163] [debug] TxEncoderStack: use_koi_tiled true.
+[2026-11-07 05:00:19.163] [debug] TxEncoderStack: use_koi_volta_tiled false.
+[2026-11-07 05:00:23.636] [debug] cuda:1 memory available: 32.40GB
+[2026-11-07 05:00:23.636] [debug] cuda:0 memory available: 32.40GB
+[2026-11-07 05:00:23.636] [debug] cuda:1 memory limit 30.62GB
+[2026-11-07 05:00:23.636] [debug] cuda:0 memory limit 30.62GB
+[2026-11-07 05:00:23.636] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 352
+[2026-11-07 05:00:23.636] [debug] cuda:0 maximum safe estimated batch size at chunk size 6144 is 736
+[2026-11-07 05:00:23.636] [debug] cuda:1 maximum safe estimated batch size at chunk size 12288 is 352
+[2026-11-07 05:00:23.636] [debug] cuda:1 maximum safe estimated batch size at chunk size 6144 is 736
+[2026-11-07 05:00:23.636] [debug] Auto batchsize cuda:0: testing up to 736 in steps of 32
+[2026-11-07 05:00:23.636] [debug] Auto batchsize cuda:1: testing up to 736 in steps of 32
+[2026-11-07 05:00:23.636] [info] Calculating optimized batch size for GPU "NVIDIA GeForce RTX 5090" and model dna_r10.4.1_e8.2_400bps_sup@v5.2.0. Full benchmarking will run for this device, which may take some time.
+[2026-11-07 05:00:23.636] [info] Calculating optimized batch size for GPU "NVIDIA GeForce RTX 5090" and model dna_r10.4.1_e8.2_400bps_sup@v5.2.0. Full benchmarking will run for this device, which may take some time.
+[2026-11-07 05:00:24.507] [debug] Auto batchsize cuda:1: 32, time per chunk 0.144939 ms
+[2026-11-07 05:00:24.507] [debug] Auto batchsize cuda:0: 32, time per chunk 0.146655 ms
+[2026-11-07 05:00:24.524] [debug] Auto batchsize cuda:1: 64, time per chunk 0.090607 ms
+[2026-11-07 05:00:24.524] [debug] Auto batchsize cuda:0: 64, time per chunk 0.091813 ms
+[2026-11-07 05:00:24.544] [debug] Auto batchsize cuda:1: 96, time per chunk 0.077026 ms
+[2026-11-07 05:00:24.544] [debug] Auto batchsize cuda:0: 96, time per chunk 0.078096 ms
+[2026-11-07 05:00:24.568] [debug] Auto batchsize cuda:1: 128, time per chunk 0.069224 ms
+[2026-11-07 05:00:24.568] [debug] Auto batchsize cuda:0: 128, time per chunk 0.070370 ms
+[2026-11-07 05:00:24.598] [debug] Auto batchsize cuda:1: 160, time per chunk 0.071741 ms
+[2026-11-07 05:00:24.598] [debug] Auto batchsize cuda:0: 160, time per chunk 0.072762 ms
+[2026-11-07 05:00:24.631] [debug] Auto batchsize cuda:1: 192, time per chunk 0.067674 ms
+[2026-11-07 05:00:24.631] [debug] Auto batchsize cuda:0: 192, time per chunk 0.068572 ms
+[2026-11-07 05:00:24.667] [debug] Auto batchsize cuda:1: 224, time per chunk 0.064754 ms
+[2026-11-07 05:00:24.667] [debug] Auto batchsize cuda:0: 224, time per chunk 0.065640 ms
+[2026-11-07 05:00:24.709] [debug] Auto batchsize cuda:1: 256, time per chunk 0.066874 ms
+[2026-11-07 05:00:24.709] [debug] Auto batchsize cuda:0: 256, time per chunk 0.067606 ms
+[2026-11-07 05:00:24.756] [debug] Auto batchsize cuda:1: 288, time per chunk 0.065759 ms
+[2026-11-07 05:00:24.756] [debug] Auto batchsize cuda:0: 288, time per chunk 0.066058 ms
+[2026-11-07 05:00:24.809] [debug] Auto batchsize cuda:1: 320, time per chunk 0.068944 ms
+[2026-11-07 05:00:24.809] [debug] Auto batchsize cuda:0: 320, time per chunk 0.069211 ms
+[2026-11-07 05:00:24.886] [debug] Auto batchsize cuda:1: 352, time per chunk 0.068013 ms
+[2026-11-07 05:00:24.886] [debug] Auto batchsize cuda:0: 352, time per chunk 0.068233 ms
+[2026-11-07 05:00:24.950] [debug] Auto batchsize cuda:1: 384, time per chunk 0.070056 ms
+[2026-11-07 05:00:24.950] [debug] Auto batchsize cuda:0: 384, time per chunk 0.070283 ms
+[2026-11-07 05:00:25.017] [debug] Auto batchsize cuda:1: 416, time per chunk 0.069341 ms
+[2026-11-07 05:00:25.017] [debug] Auto batchsize cuda:0: 416, time per chunk 0.069430 ms
+[2026-11-07 05:00:25.089] [debug] Auto batchsize cuda:1: 448, time per chunk 0.068642 ms
+[2026-11-07 05:00:25.089] [debug] Auto batchsize cuda:0: 448, time per chunk 0.068920 ms
+[2026-11-07 05:00:25.167] [debug] Auto batchsize cuda:1: 480, time per chunk 0.070288 ms
+[2026-11-07 05:00:25.167] [debug] Auto batchsize cuda:0: 480, time per chunk 0.070472 ms
+[2026-11-07 05:00:25.249] [debug] Auto batchsize cuda:1: 512, time per chunk 0.069489 ms
+[2026-11-07 05:00:25.249] [debug] Auto batchsize cuda:0: 512, time per chunk 0.069733 ms
+[2026-11-07 05:00:25.337] [debug] Auto batchsize cuda:1: 544, time per chunk 0.070661 ms
+[2026-11-07 05:00:25.337] [debug] Auto batchsize cuda:0: 544, time per chunk 0.071081 ms
+[2026-11-07 05:00:25.430] [debug] Auto batchsize cuda:1: 576, time per chunk 0.069870 ms
+[2026-11-07 05:00:25.430] [debug] Auto batchsize cuda:0: 576, time per chunk 0.070097 ms
+[2026-11-07 05:00:25.528] [debug] Auto batchsize cuda:1: 608, time per chunk 0.070904 ms
+[2026-11-07 05:00:25.528] [debug] Auto batchsize cuda:0: 608, time per chunk 0.071080 ms
+[2026-11-07 05:00:25.630] [debug] Auto batchsize cuda:1: 640, time per chunk 0.070039 ms
+[2026-11-07 05:00:25.630] [debug] Auto batchsize cuda:0: 640, time per chunk 0.070246 ms
+[2026-11-07 05:00:25.738] [debug] Auto batchsize cuda:1: 672, time per chunk 0.069838 ms
+[2026-11-07 05:00:25.738] [debug] Auto batchsize cuda:0: 672, time per chunk 0.070022 ms
+[2026-11-07 05:00:25.850] [debug] Auto batchsize cuda:1: 704, time per chunk 0.069655 ms
+[2026-11-07 05:00:25.850] [debug] Auto batchsize cuda:0: 704, time per chunk 0.069896 ms
+[2026-11-07 05:00:25.965] [debug] Auto batchsize cuda:1: 736, time per chunk 0.069094 ms
+[2026-11-07 05:00:25.965] [debug] Auto batchsize cuda:0: 736, time per chunk 0.069328 ms
+[2026-11-07 05:00:25.965] [debug] Adding chunk timings to internal cache for GPU NVIDIA GeForce RTX 5090, model dna_r10.4.1_e8.2_400bps_sup@v5.2.0 (6 entries)
+[2026-11-07 05:00:25.966] [debug] Largest batch size for cuda:1: 224, time per chunk 0.064754 ms
+[2026-11-07 05:00:25.966] [debug] Final batch size for cuda:1[0]: 224
+[2026-11-07 05:00:25.966] [debug] Final batch size for cuda:1[1]: 224
+[2026-11-07 05:00:25.966] [debug] Adding chunk timings to internal cache for GPU NVIDIA GeForce RTX 5090, model dna_r10.4.1_e8.2_400bps_sup@v5.2.0 (6 entries)
+[2026-11-07 05:00:25.966] [debug] Largest batch size for cuda:0: 224, time per chunk 0.065640 ms
+[2026-11-07 05:00:25.966] [debug] Final batch size for cuda:0[0]: 224
+[2026-11-07 05:00:25.966] [debug] Final batch size for cuda:0[1]: 224
+[2026-11-07 05:00:25.966] [info] cuda:1 using chunk size 12288, batch size 224
+[2026-11-07 05:00:25.966] [info] cuda:0 using chunk size 12288, batch size 224
+[2026-11-07 05:00:25.966] [debug] cuda:0 Model memory 15.99GB
+[2026-11-07 05:00:25.966] [debug] cuda:0 Decode memory 1.94GB
+[2026-11-07 05:00:25.966] [debug] cuda:1 Model memory 15.99GB
+[2026-11-07 05:00:25.966] [debug] cuda:1 Decode memory 1.94GB
+[2026-11-07 05:00:26.082] [info] cuda:1 using chunk size 6144, batch size 224
+[2026-11-07 05:00:26.082] [debug] cuda:1 Model memory 7.99GB
+[2026-11-07 05:00:26.082] [debug] cuda:1 Decode memory 0.97GB
+[2026-11-07 05:00:26.082] [info] cuda:0 using chunk size 6144, batch size 224
+[2026-11-07 05:00:26.082] [debug] cuda:0 Model memory 7.99GB
+[2026-11-07 05:00:26.082] [debug] cuda:0 Decode memory 0.97GB
+[2026-11-07 05:00:26.631] [debug] BasecallerNode chunk size 12288
+[2026-11-07 05:00:26.631] [debug] BasecallerNode chunk size 6144
+[2026-11-07 05:00:26.638] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_136.pod5
+[2026-11-07 05:12:11.360] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_135.pod5
+[2026-11-07 05:24:46.961] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_134.pod5
+[2026-11-07 05:37:07.833] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_133.pod5
+[2026-11-07 05:49:05.576] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_132.pod5
+[2026-11-07 06:00:53.713] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_131.pod5
+[2026-11-07 06:12:31.265] [info] > Finished in (ms): 4324621
+[2026-11-07 06:12:31.269] [info] > Simplex reads basecalled: 605807
+[2026-11-07 06:12:31.269] [info] > Simplex reads filtered: 36
+[2026-11-07 06:12:31.271] [info] > Basecalled @ Samples/s: 3.408570e+07
+[2026-11-07 06:12:31.271] [debug] > Including Padding @ Samples/s: 3.658e+07 (93.17%)
+[2026-11-07 06:12:31.301] [info] > Finished

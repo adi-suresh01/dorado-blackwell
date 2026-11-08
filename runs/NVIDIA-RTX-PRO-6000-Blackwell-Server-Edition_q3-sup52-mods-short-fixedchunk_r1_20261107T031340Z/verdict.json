@@ -1,0 +1,115 @@
+{
+ "schema_version": 1,
+ "run_id": "NVIDIA-RTX-PRO-6000-Blackwell-Server-Edition_q3-sup52-mods-short-fixedchunk_r1_20261107T031340Z",
+ "question": "Q3",
+ "config_id": "q3-sup52-mods-short-fixedchunk",
+ "repeat": 1,
+ "started_utc": "20261107T031340Z",
+ "host": {
+  "provider": "runpod",
+  "pod_id": "smjaos4li99lmu",
+  "image": "nvidia/cuda:12.8.1-base-ubuntu24.04@sha256:133c78a0575303be34164d0b90137a042172bdf60696af01a3c424ab402d86e2",
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "gpu_count": 1,
+  "driver_version": "595.91.07",
+  "cuda_driver_version": "13.2",
+  "compute_cap": "12.0",
+  "vram_mib": 97887,
+  "power_limit_w": 600.0,
+  "gpu_uuids": [
+   "GPU-13178d0d-b669-ed79-c919-5a55ebacdcff"
+  ],
+  "cpu_model": "AMD EPYC 9355 32-Core Processor",
+  "cpu_threads": 128,
+  "host_ram_gib": 1511.4,
+  "kernel": "6.8.0-147-generic"
+ },
+ "dorado": {
+  "version": "2.1.2+8b8fc5d",
+  "build_sha256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485",
+  "simplex_model": "dna_r10.4.1_e8.2_400bps_sup@v5.2.0",
+  "mods_models": [
+   "dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2"
+  ]
+ },
+ "args": {
+  "command": [
+   "/workspace/dorado/dorado-2.1.2-linux-x64/bin/dorado",
+   "basecaller",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0",
+   "/workspace/dorado/subsets/short-155bp",
+   "--device",
+   "cuda:0",
+   "--batchsize",
+   "0",
+   "-v",
+   "--modified-bases-models",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2",
+   "--disable-variable-chunk-sizes"
+  ],
+  "device": "cuda:0",
+  "batchsize_requested": 0,
+  "chunksize_requested": null,
+  "overlap_requested": null,
+  "mods_batchsize_requested": null,
+  "env": {
+   "CUDA_VERSION": "12.8.1",
+   "DORADO_BUILD_SHA256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485"
+  }
+ },
+ "data": {
+  "subset_id": "short-155bp",
+  "proxy": true,
+  "source": "ONT open data modbase-validation_2024.10 subset/ (155 bp synthetic constructs, 5mC/5hmC ground truth), signal_positive reads of 1000-6000 samples; proxy, not cfDNA",
+  "reads": 473185,
+  "total_samples": 1046600811,
+  "sample_rate_hz": 5000,
+  "read_ids_sha256": "db81fc9a6909427626073a567dd16ccb365c428555c54fe18b8620fda2dd399f"
+ },
+ "result": {
+  "exit_code": 0,
+  "time_limited": false,
+  "crashed": false,
+  "error_lines": [],
+  "wall_s": 133.615,
+  "dorado_finished_ms": 130720
+ },
+ "batching": {
+  "batchsize_used": 928,
+  "chunksize_used": 12288,
+  "batchsize_from_benchmark_table": true,
+  "log_lines": [
+   "[2026-11-07 03:13:40.239] [info] Running: \"basecaller\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0\" \"/workspace/dorado/subsets/short-155bp\" \"--device\" \"cuda:0\" \"--batchsize\" \"0\" \"-v\" \"--modified-bases-models\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2\" \"--disable-variable-chunk-sizes\"",
+   "[2026-11-07 03:13:40.766] [debug] Fastest capped+limited batch size is 928 @ 22477400",
+   "[2026-11-07 03:13:41.313] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 1216",
+   "[2026-11-07 03:13:41.313] [debug] cuda:0 maximum safe estimated batch size at chunk size 6144 is 2464",
+   "[2026-11-07 03:13:41.313] [debug] cuda:0 using chunk size 12288, batch size 928",
+   "[2026-11-07 03:13:42.045] [debug] cuda:0 using chunk size 6144, batch size 928",
+   "[2026-11-07 03:13:42.438] [debug] BasecallerNode chunk size 12288",
+   "[2026-11-07 03:13:42.438] [debug] BasecallerNode chunk size 6144"
+  ]
+ },
+ "throughput": {
+  "samples_per_s": 7970234.0,
+  "padding_samples_per_s": 22240000.0,
+  "useful_fraction": 0.35837,
+  "reads_per_s": 3619.82,
+  "peak_vram_mib": 51275,
+  "mean_gpu_util_pct": 98.1,
+  "mean_power_w": 580.3
+ },
+ "cost": {
+  "usd_hr": 2.49,
+  "usd_hr_source": "runpod NVIDIA RTX PRO 6000 Blackwell Server Edition pod smjaos4li99lmu, rate at reservation 2026-11-07T02:54:10Z (harness ledger)",
+  "usd_run": 0.09242,
+  "usd_per_gbase": 1.6206
+ },
+ "output": {
+  "bam": "calls.bam",
+  "reads_out": 473184,
+  "bases_out": 57027303,
+  "reads_with_mm": 473184,
+  "mean_qscore": 13.599,
+  "records_sha256": "e88ba9e871239df5a4fea0c04af084e2eb12640f89d7dc0dff41896586fa6f35"
+ }
+}

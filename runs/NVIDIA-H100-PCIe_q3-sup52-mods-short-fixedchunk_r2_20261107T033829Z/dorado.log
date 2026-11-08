@@ -1,0 +1,27 @@
+[2026-11-07 03:38:30.279] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0" "/workspace/dorado/subsets/short-155bp" "--device" "cuda:0" "--batchsize" "0" "-v" "--modified-bases-models" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2" "--disable-variable-chunk-sizes"
+[2026-11-07 03:38:31.002] [info] Using CUDA devices:
+[2026-11-07 03:38:31.002] [info] cuda:0 - NVIDIA H100 PCIe
+[2026-11-07 03:38:32.036] [debug] cuda:0 memory available: 84.00GB
+[2026-11-07 03:38:32.036] [debug] Fastest capped+limited batch size is 992 @ 19273400
+[2026-11-07 03:38:32.042] [debug] TxEncoderStack: use_koi_tiled true.
+[2026-11-07 03:38:32.042] [debug] TxEncoderStack: use_koi_volta_tiled false.
+[2026-11-07 03:38:36.160] [debug] cuda:0 memory available: 83.83GB
+[2026-11-07 03:38:36.160] [debug] cuda:0 memory limit 82.07GB
+[2026-11-07 03:38:36.160] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 1024
+[2026-11-07 03:38:36.160] [debug] cuda:0 maximum safe estimated batch size at chunk size 6144 is 2048
+[2026-11-07 03:38:36.160] [debug] cuda:0 using chunk size 12288, batch size 992
+[2026-11-07 03:38:36.160] [debug] cuda:0 Model memory 70.80GB
+[2026-11-07 03:38:36.160] [debug] cuda:0 Decode memory 8.60GB
+[2026-11-07 03:38:36.953] [debug] cuda:0 using chunk size 6144, batch size 992
+[2026-11-07 03:38:36.953] [debug] cuda:0 Model memory 35.40GB
+[2026-11-07 03:38:36.953] [debug] cuda:0 Decode memory 4.30GB
+[2026-11-07 03:38:37.513] [info] > Creating basecall pipeline
+[2026-11-07 03:38:37.520] [debug] BasecallerNode chunk size 12288
+[2026-11-07 03:38:37.520] [debug] BasecallerNode chunk size 6144
+[2026-11-07 03:38:37.572] [debug] Load reads from file /workspace/dorado/subsets/short-155bp/short-155bp.pod5
+[2026-11-07 03:41:16.810] [info] > Finished in (ms): 159239
+[2026-11-07 03:41:16.815] [info] > Simplex reads basecalled: 473183
+[2026-11-07 03:41:16.816] [info] > Simplex reads filtered: 2
+[2026-11-07 03:41:16.818] [info] > Basecalled @ Samples/s: 6.542800e+06
+[2026-11-07 03:41:16.819] [debug] > Including Padding @ Samples/s: 1.830e+07 (35.76%)
+[2026-11-07 03:41:16.822] [info] > Finished

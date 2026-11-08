@@ -1,0 +1,2 @@
+# Third repeats for configs whose r1 and r2 samples/s differ by more than 1.15x on NVIDIA RTX PRO 6000 Blackwell Server Edition
+# (written by outlier_plan.py; same columns as the source plan)

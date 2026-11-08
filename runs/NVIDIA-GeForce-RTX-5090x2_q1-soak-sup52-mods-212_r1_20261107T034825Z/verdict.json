@@ -1,0 +1,118 @@
+{
+ "schema_version": 1,
+ "run_id": "NVIDIA-GeForce-RTX-5090x2_q1-soak-sup52-mods-212_r1_20261107T034825Z",
+ "question": "Q1",
+ "config_id": "q1-soak-sup52-mods-212",
+ "repeat": 1,
+ "started_utc": "20261107T034825Z",
+ "host": {
+  "provider": "runpod",
+  "pod_id": "pblsqn1wq0prsv",
+  "image": "nvidia/cuda:12.8.1-base-ubuntu24.04@sha256:133c78a0575303be34164d0b90137a042172bdf60696af01a3c424ab402d86e2",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "gpu_count": 2,
+  "driver_version": "595.91.07",
+  "cuda_driver_version": "13.2",
+  "compute_cap": "12.0",
+  "vram_mib": 32607,
+  "power_limit_w": 600.0,
+  "gpu_uuids": [
+   "GPU-af0a28ad-614f-de40-e5dc-a73a9decc760",
+   "GPU-d12560c1-445b-b809-f87f-e106b0748a2e"
+  ],
+  "cpu_model": "AMD Ryzen 9 9950X 16-Core Processor",
+  "cpu_threads": 32,
+  "host_ram_gib": 123.4,
+  "kernel": "6.8.0-147-generic"
+ },
+ "dorado": {
+  "version": "2.1.2+8b8fc5d",
+  "build_sha256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485",
+  "simplex_model": "dna_r10.4.1_e8.2_400bps_sup@v5.2.0",
+  "mods_models": [
+   "dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2"
+  ]
+ },
+ "args": {
+  "command": [
+   "/workspace/dorado/dorado-2.1.2-linux-x64/bin/dorado",
+   "basecaller",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0",
+   "/workspace/dorado/soak",
+   "--device",
+   "cuda:all",
+   "--batchsize",
+   "0",
+   "-v",
+   "--modified-bases-models",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2"
+  ],
+  "device": "cuda:all",
+  "batchsize_requested": 0,
+  "chunksize_requested": null,
+  "overlap_requested": null,
+  "mods_batchsize_requested": null,
+  "env": {
+   "CUDA_VERSION": "12.8.1",
+   "DORADO_BUILD_SHA256": "f4ed83acfb75cf07ffe8a0fc78e26828fc911fcfc8177920be6104e1d0e02485"
+  }
+ },
+ "data": {
+  "subset_id": "soak",
+  "proxy": true,
+  "source": "unknown",
+  "reads": null,
+  "total_samples": null,
+  "sample_rate_hz": null,
+  "read_ids_sha256": null
+ },
+ "result": {
+  "exit_code": 0,
+  "time_limited": false,
+  "crashed": false,
+  "error_lines": [],
+  "wall_s": 3918.946,
+  "dorado_finished_ms": 3902170
+ },
+ "batching": {
+  "batchsize_used": 352,
+  "chunksize_used": 12288,
+  "batchsize_from_benchmark_table": true,
+  "log_lines": [
+   "[2026-11-07 03:48:28.316] [info] Running: \"basecaller\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0\" \"/workspace/dorado/soak\" \"--device\" \"cuda:all\" \"--batchsize\" \"0\" \"-v\" \"--modified-bases-models\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2\"",
+   "[2026-11-07 03:48:32.273] [debug] Fastest capped+limited batch size is 384 @ 19696600",
+   "[2026-11-07 03:48:32.274] [debug] Fastest capped+limited batch size is 384 @ 19696600",
+   "[2026-11-07 03:48:36.967] [debug] cuda:1 maximum safe estimated batch size at chunk size 12288 is 352",
+   "[2026-11-07 03:48:36.967] [warning] cuda:1: Requested batch size 384 exceeds maximum safe estimated batch size 352.",
+   "[2026-11-07 03:48:36.967] [debug] cuda:1 using chunk size 12288, batch size 352",
+   "[2026-11-07 03:48:36.967] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 352",
+   "[2026-11-07 03:48:36.967] [warning] cuda:0: Requested batch size 384 exceeds maximum safe estimated batch size 352.",
+   "[2026-11-07 03:48:36.967] [debug] cuda:0 using chunk size 12288, batch size 352",
+   "[2026-11-07 03:48:37.548] [debug] BasecallerNode chunk size 12288"
+  ]
+ },
+ "throughput": {
+  "samples_per_s": 37775830.0,
+  "padding_samples_per_s": 39790000.0,
+  "useful_fraction": 0.94938,
+  "reads_per_s": 155.25,
+  "peak_vram_mib": 31824,
+  "mean_gpu_util_pct": 99.5,
+  "mean_power_w": 597.6
+ },
+ "cost": {
+  "usd_hr": 2.38,
+  "usd_hr_source": "runpod NVIDIA GeForce RTX 5090 pod pblsqn1wq0prsv, rate at reservation 2026-11-07T02:54:10Z (harness ledger)",
+  "usd_run": 2.59086,
+  "usd_per_gbase": null
+ },
+ "output": {
+  "bam": null,
+  "reads_out": null,
+  "bases_out": null,
+  "reads_with_mm": null,
+  "mean_qscore": null,
+  "records_sha256": null
+ },
+ "notes": "no subset manifest at /workspace/dorado/soak/manifest.json; data fields unknown, proxy assumed; calls not written (soak run); read counts come from Dorado's log only"
+}

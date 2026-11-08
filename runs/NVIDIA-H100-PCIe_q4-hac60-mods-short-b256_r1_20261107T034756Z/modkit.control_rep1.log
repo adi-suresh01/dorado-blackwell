@@ -1,0 +1,10 @@
+[modkit-logging/src/lib.rs::69][2026-11-07 04:13:32][DEBUG] command line: /Users/adi/Desktop/dorado-blackwell/tools/modkit-linux/dist_modkit_v0.6.4_cd85862/modkit pileup /Users/adi/Desktop/dorado-blackwell/runs/NVIDIA-H100-PCIe_q4-hac60-mods-short-b256_r1_20261107T034756Z/aligned.control_rep1.bam /Users/adi/Desktop/dorado-blackwell/runs/NVIDIA-H100-PCIe_q4-hac60-mods-short-b256_r1_20261107T034756Z/pileup.control_rep1.bed --ref /Users/adi/Desktop/dorado-blackwell/references/all_5mers.fa --no-filtering --log-filepath /Users/adi/Desktop/dorado-blackwell/runs/NVIDIA-H100-PCIe_q4-hac60-mods-short-b256_r1_20261107T034756Z/modkit.control_rep1.log
+[modkit-core/src/util.rs::535][2026-11-07 04:13:32][INFO] discarded 0 contigs with zero aligned reads
+[modkit-core/src/pileup/subcommand.rs::1170][2026-11-07 04:13:32][DEBUG] using standard file writer
+[modkit-core/src/pileup/subcommand.rs::1236][2026-11-07 04:13:32][INFO] not performing filtering
+[modkit-core/src/pileup/subcommand.rs::1269][2026-11-07 04:13:32][DEBUG] per_mod_thresholds=[]
+[modkit-core/src/pileup/subcommand.rs::1495][2026-11-07 04:13:32][INFO] using general workers
+[modkit-core/src/interval_chunks.rs::378][2026-11-07 04:13:32][DEBUG] there is 32 reference record(s)
+[modkit-core/src/interval_chunks.rs::401][2026-11-07 04:13:32][DEBUG] there are 32 contig(s) to work on (32 parts)
+[modkit-core/src/interval_chunks.rs::428][2026-11-07 04:13:32][DEBUG] feeder is done
+[modkit-core/src/pileup/subcommand.rs::1653][2026-11-07 04:13:32][INFO] Done, processed 10230 rows.

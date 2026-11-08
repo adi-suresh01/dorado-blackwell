@@ -1,0 +1,113 @@
+{
+ "schema_version": 1,
+ "run_id": "NVIDIA-GeForce-RTX-5090_gpu-smoke-hac52-mods-tiny_r1_20261107T024844Z",
+ "question": "smoke",
+ "config_id": "gpu-smoke-hac52-mods-tiny",
+ "repeat": 1,
+ "started_utc": "20261107T024844Z",
+ "host": {
+  "provider": null,
+  "pod_id": null,
+  "image": null,
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "gpu_count": 1,
+  "driver_version": "595.91.07",
+  "cuda_driver_version": "13.2",
+  "compute_cap": "12.0",
+  "vram_mib": 32607,
+  "power_limit_w": 575.0,
+  "gpu_uuids": [
+   "GPU-bb67bbba-213f-3b86-2342-7f249262e85e"
+  ],
+  "cpu_model": "AMD Ryzen 9 9950X 16-Core Processor",
+  "cpu_threads": 32,
+  "host_ram_gib": 186.3,
+  "kernel": "6.8.0-147-generic"
+ },
+ "dorado": {
+  "version": "2.1.2+8b8fc5d",
+  "build_sha256": null,
+  "simplex_model": "dna_r10.4.1_e8.2_400bps_hac@v5.2.0",
+  "mods_models": [
+   "dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2"
+  ]
+ },
+ "args": {
+  "command": [
+   "/workspace/dorado/dorado-2.1.2-linux-x64/bin/dorado",
+   "basecaller",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v5.2.0",
+   "/workspace/dorado/subsets/tiny-short",
+   "--device",
+   "cuda:0",
+   "--batchsize",
+   "0",
+   "-v",
+   "--modified-bases-models",
+   "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2"
+  ],
+  "device": "cuda:0",
+  "batchsize_requested": 0,
+  "chunksize_requested": null,
+  "overlap_requested": null,
+  "mods_batchsize_requested": null,
+  "env": {
+   "CUDA_VERSION": "12.8.1"
+  }
+ },
+ "data": {
+  "subset_id": "tiny-short",
+  "proxy": true,
+  "source": "ONT open data modbase-validation_2024.10 subset/ (155 bp synthetic constructs, 5mC/5hmC ground truth), signal_positive reads of 1000-6000 samples; proxy, not cfDNA; first 2000 reads",
+  "reads": 2000,
+  "total_samples": 4423553,
+  "sample_rate_hz": 5000,
+  "read_ids_sha256": "2b060f1454b6e207866c9f49877ca488ff5f5cd34bb6d3101a9dcdd966ad877e"
+ },
+ "result": {
+  "exit_code": 0,
+  "time_limited": false,
+  "crashed": false,
+  "error_lines": [],
+  "wall_s": 9.381,
+  "dorado_finished_ms": 602
+ },
+ "batching": {
+  "batchsize_used": 3456,
+  "chunksize_used": 9996,
+  "batchsize_from_benchmark_table": true,
+  "log_lines": [
+   "[2026-11-07 02:48:47.319] [info] Running: \"basecaller\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v5.2.0\" \"/workspace/dorado/subsets/tiny-short\" \"--device\" \"cuda:0\" \"--batchsize\" \"0\" \"-v\" \"--modified-bases-models\" \"/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_hac@v5.2.0_5mC_5hmC@v2\"",
+   "[2026-11-07 02:48:49.217] [debug] Fastest capped+limited batch size is 3456 @ 157539000",
+   "[2026-11-07 02:48:49.748] [debug] cuda:0 maximum safe estimated batch size at chunk size 9996 is 4288",
+   "[2026-11-07 02:48:49.748] [debug] cuda:0 maximum safe estimated batch size at chunk size 4998 is 8640",
+   "[2026-11-07 02:48:49.748] [debug] cuda:0 using chunk size 9996, batch size 3456",
+   "[2026-11-07 02:48:49.993] [debug] cuda:0 using chunk size 4998, batch size 3456",
+   "[2026-11-07 02:48:50.278] [debug] BasecallerNode chunk size 9996",
+   "[2026-11-07 02:48:50.278] [debug] BasecallerNode chunk size 4998"
+  ]
+ },
+ "throughput": {
+  "samples_per_s": 7314872.0,
+  "padding_samples_per_s": 172200000.0,
+  "useful_fraction": 0.04248,
+  "reads_per_s": 3322.26,
+  "peak_vram_mib": 23816,
+  "mean_gpu_util_pct": 0.1,
+  "mean_power_w": 72.6
+ },
+ "cost": {
+  "usd_hr": 1.19,
+  "usd_hr_source": "smoke",
+  "usd_run": 0.0031,
+  "usd_per_gbase": 12.711
+ },
+ "output": {
+  "bam": "calls.bam",
+  "reads_out": 2000,
+  "bases_out": 243884,
+  "reads_with_mm": 2000,
+  "mean_qscore": 12.015,
+  "records_sha256": "dfa9bc4bd3947709baedb452260bfdf3c7fe24d5000f1f376c7483a58a44c29b"
+ }
+}

@@ -1,0 +1,40 @@
+[2026-11-07 03:48:28.316] [info] Running: "basecaller" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0" "/workspace/dorado/soak" "--device" "cuda:all" "--batchsize" "0" "-v" "--modified-bases-models" "/workspace/dorado/models/dna_r10.4.1_e8.2_400bps_sup@v5.2.0_5mC_5hmC@v2"
+[2026-11-07 03:48:30.381] [info] Using CUDA devices:
+[2026-11-07 03:48:30.381] [info] cuda:0 - NVIDIA GeForce RTX 5090
+[2026-11-07 03:48:30.381] [info] cuda:1 - NVIDIA GeForce RTX 5090
+[2026-11-07 03:48:32.271] [debug] cuda:1 memory available: 32.56GB
+[2026-11-07 03:48:32.271] [debug] cuda:0 memory available: 32.56GB
+[2026-11-07 03:48:32.273] [debug] Fastest capped+limited batch size is 384 @ 19696600
+[2026-11-07 03:48:32.274] [debug] Fastest capped+limited batch size is 384 @ 19696600
+[2026-11-07 03:48:32.276] [debug] TxEncoderStack: use_koi_tiled true.
+[2026-11-07 03:48:32.276] [debug] TxEncoderStack: use_koi_volta_tiled false.
+[2026-11-07 03:48:32.280] [debug] TxEncoderStack: use_koi_tiled true.
+[2026-11-07 03:48:32.280] [debug] TxEncoderStack: use_koi_volta_tiled false.
+[2026-11-07 03:48:36.967] [debug] cuda:1 memory available: 32.40GB
+[2026-11-07 03:48:36.967] [debug] cuda:1 memory limit 30.62GB
+[2026-11-07 03:48:36.967] [debug] cuda:1 maximum safe estimated batch size at chunk size 12288 is 352
+[2026-11-07 03:48:36.967] [warning] cuda:1: Requested batch size 384 exceeds maximum safe estimated batch size 352.
+[2026-11-07 03:48:36.967] [debug] cuda:1 using chunk size 12288, batch size 352
+[2026-11-07 03:48:36.967] [debug] cuda:1 Model memory 25.12GB
+[2026-11-07 03:48:36.967] [debug] cuda:1 Decode memory 3.05GB
+[2026-11-07 03:48:36.967] [debug] cuda:0 memory available: 32.40GB
+[2026-11-07 03:48:36.967] [debug] cuda:0 memory limit 30.62GB
+[2026-11-07 03:48:36.967] [debug] cuda:0 maximum safe estimated batch size at chunk size 12288 is 352
+[2026-11-07 03:48:36.967] [warning] cuda:0: Requested batch size 384 exceeds maximum safe estimated batch size 352.
+[2026-11-07 03:48:36.967] [debug] cuda:0 using chunk size 12288, batch size 352
+[2026-11-07 03:48:36.968] [debug] cuda:0 Model memory 25.12GB
+[2026-11-07 03:48:36.968] [debug] cuda:0 Decode memory 3.05GB
+[2026-11-07 03:48:37.546] [info] > Creating basecall pipeline
+[2026-11-07 03:48:37.548] [debug] BasecallerNode chunk size 12288
+[2026-11-07 03:48:38.027] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_136.pod5
+[2026-11-07 03:59:13.229] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_135.pod5
+[2026-11-07 04:10:34.977] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_134.pod5
+[2026-11-07 04:21:42.638] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_133.pod5
+[2026-11-07 04:32:31.287] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_132.pod5
+[2026-11-07 04:43:10.016] [debug] Load reads from file /workspace/dorado/soak/PAW70337_66b2eea5_de8117b1_131.pod5
+[2026-11-07 04:53:40.201] [info] > Finished in (ms): 3902170
+[2026-11-07 04:53:40.211] [info] > Simplex reads basecalled: 605807
+[2026-11-07 04:53:40.211] [info] > Simplex reads filtered: 38
+[2026-11-07 04:53:40.221] [info] > Basecalled @ Samples/s: 3.777583e+07
+[2026-11-07 04:53:40.223] [debug] > Including Padding @ Samples/s: 3.979e+07 (94.93%)
+[2026-11-07 04:53:40.254] [info] > Finished
