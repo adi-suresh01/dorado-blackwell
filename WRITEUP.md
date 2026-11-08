@@ -48,9 +48,10 @@ runs, no crashes, $22.28 of GPU rental. Raw verdicts: `runs/`, tables: `results/
    files ran out (exit 0). Then 2.1.2 ran the full 3 h box (stopped by us) on a second 2x 5090 machine, over the
    same files listed 4 times: both GPUs 100% busy at batch 352, memory flat from the first to the last 45 min (GPU0
    28,947 to 29,014 MiB of 32,607), no error lines (n=1; samples/s not logged, since the box stops Dorado before
-   its summary). The reporter's crashes came after 1.5-10 h, so 3 h does not rule it out. In all three of their
-   crash logs (1.1.1 and 1.4.0) the two 5090s took different batch sizes from Dorado's start-up benchmark, and in
-   the one with memory lines a GPU sat at 29.5 of its 30.5 GB budget (batch 736). Ours took 224 on both under
+   its summary). The reporter's three crashes came after 89 min (5mC_5hmC), 4.3 h and 11 h (4mC_5mC + 6mA, not
+   tested here), so 3 h does not rule it out. In all three logs (1.1.1 and 1.4.0) the two 5090s took different
+   batch sizes from Dorado's start-up benchmark, and in the one with memory lines a GPU sat at 29.5 of its 30.5 GB
+   budget (batch 736). Ours took 224 on both under
    1.4.0 (17.9 GB); 2.1.2 skips the benchmark and uses 352 from its built-in table on both (28.2 GB, also clean).
 
 ## What to run
