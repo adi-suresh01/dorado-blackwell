@@ -1,0 +1,7 @@
+# Q1 follow-up on 2x RTX 5090 with --device cuda:all: dorado#1507's title config, which the first soaks did not run.
+# The reporter crashed with sup@v5.2.0 + 4mC_5mC + 6mA after 11 h (1.1.1, Sep 2025) and 4.3 h (1.4.0, Apr 2026),
+# with the two GPUs on different batch sizes both times. One Dorado 1.4.0 process, auto batch size, time-boxed at
+# 5 h (past the 4.3 h crash) over the six soak files listed 6 times (pod_setup.sh --soak-files 6 --soak-copies 6:
+# about 8.8e11 samples, 7 h even at the 3.41e7 samples/s 1.4.0 ran with 5mC_5hmC), so it ends at the box, exit 124.
+# Same columns as single-gpu.tsv; the mods column takes a comma list.
+Q1	q1-soak5h-sup52-4mc5mc-6ma-140	1	SUP52	SUP52_4MC5MC,SUP52_6MA	soak	0	-	18000	1.4.0	-

@@ -50,8 +50,14 @@ grep -v '^#' "$plan" | grep -v '^[[:space:]]*$' | while IFS=$'\t' read -r questi
     args=(--question "$question" --config "$config" --repeat "$repeat" --model "$work/models/${!mvar}"
           --subset "$subset" --batchsize "$batch" --out "$out")
     if [[ $mods != - ]]; then
-        modvar="M_$mods"
-        args+=(--mods "$work/models/${!modvar}")
+        # A comma list (SUP52_4MC5MC,SUP52_6MA) runs several mods models at once, as dorado#1507's crashes did.
+        paths=()
+        IFS=, read -ra modnames <<< "$mods"
+        for name in "${modnames[@]}"; do
+            modvar="M_$name"
+            paths+=("$work/models/${!modvar}")
+        done
+        args+=(--mods "$(IFS=,; echo "${paths[*]}")")
     fi
     # Only short-read calls feed the per-site pileups; long-read runs keep their stats and call digest in the
     # verdict, and a soak's calls (many GB) are never written.

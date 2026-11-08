@@ -74,7 +74,8 @@ fi
 "$W/venv/bin/python" -c "import pod5, pysam; print('pod5', pod5.__version__, 'pysam', pysam.__version__)"
 
 echo "== models"
-for m in "$M_HAC52" "$M_SUP52" "$M_HAC60" "$M_HAC52_5MC5HMC" "$M_SUP52_5MC5HMC" "$M_HAC60_5MC5HMC"; do
+for m in "$M_HAC52" "$M_SUP52" "$M_HAC60" "$M_HAC52_5MC5HMC" "$M_SUP52_5MC5HMC" "$M_HAC60_5MC5HMC" \
+        "$M_SUP52_4MC5MC" "$M_SUP52_6MA"; do
     [[ -d $W/models/$m ]] || "$D" download --model "$m" --models-directory "$W/models" 2>&1 | tail -n 1
 done
 ls "$W/models"
